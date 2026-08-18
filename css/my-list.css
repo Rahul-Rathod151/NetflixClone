@@ -1,5 +1,14 @@
+/* =========================================================
+   NETFLIX MY LIST - PREMIUM STYLING
+   ========================================================= */
+
 :root {
-    --red: #e50914;
+    --netflix-red: #E50914;
+    --black: #141414;
+    --deep-black: #000000;
+    --white: #FFFFFF;
+    --text-gray: #B3B3B3;
+    --dark-gray: #181818;
 }
 
 * {
@@ -10,315 +19,269 @@
 
 body {
     min-width: 320px;
-    background: #141414;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
 }
 
-
-/* ================= HEADER ================= */
-
 .my-list-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 70px;
-
     padding: 0 4%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    background: #000;
+    z-index: 1000;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .netflix-logo {
-    color: var(--red);
-
-    text-decoration: none;
-
-    font-size: 2rem;
+    color: var(--netflix-red);
+    font-size: 1.85rem;
     font-weight: 900;
-
-    letter-spacing: -2px;
-}
-
-.my-list-header nav {
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-}
-
-.my-list-header nav a {
-    color: #fff;
-
+    letter-spacing: 2px;
     text-decoration: none;
-
-    font-size: 14px;
-
-    transition: color .2s ease;
 }
 
-.my-list-header nav a:hover {
-    color: #aaa;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
+.nav-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
-/* ================= PAGE ================= */
+.nav-links a:hover {
+    color: var(--white);
+}
 
 .my-list-page {
-    padding: 45px 4% 60px;
+    padding: 100px 4% 60px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .page-heading {
-    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-.page-heading h1 {
-    font-size: 32px;
-
-    margin-bottom: 8px;
+.heading-title {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
 }
 
-.page-heading p {
-    color: #999;
-
-    font-size: 14px;
+.heading-title h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
 }
 
+.list-count {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
 
-/* ================= GRID ================= */
+.list-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--white);
+    color: var(--deep-black);
+    border-color: var(--white);
+}
 
 .my-list-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(6, minmax(0, 1fr));
-
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
 }
-
-
-/* ================= CARD ================= */
 
 .my-list-card {
     position: relative;
-
-    aspect-ratio: 2 / 3;
-
+    border-radius: 6px;
     overflow: hidden;
-
-    border-radius: 5px;
-
+    background: var(--dark-gray);
     cursor: pointer;
-
-    background: #222;
-
-    transition:
-        transform .3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
 .my-list-card:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
 
+.my-list-card.removing {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.card-media {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.card-media img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
     z-index: 5;
 }
 
-.my-list-card img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
+.remove-button:hover {
+    background: var(--netflix-red);
+    border-color: var(--netflix-red);
+    transform: scale(1.1);
 }
 
-
-/* ================= OVERLAY ================= */
-
-.my-list-overlay {
+.play-overlay-btn {
     position: absolute;
-
-    inset: 0;
-
-    padding: 14px;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-size: 1.1rem;
     display: flex;
-
-    flex-direction: column;
-
-    justify-content: flex-end;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0, 0, 0, .95),
-            transparent 65%
-        );
-
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-
-    transition: opacity .25s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 4;
 }
 
-.my-list-card:hover .my-list-overlay {
+.my-list-card:hover .play-overlay-btn {
     opacity: 1;
 }
 
-.my-list-title {
-    font-size: 16px;
+.my-list-overlay {
+    padding: 12px;
+    background: var(--dark-gray);
+}
 
-    margin-bottom: 7px;
+.my-list-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 6px;
 }
 
 .my-list-info {
     display: flex;
-
-    gap: 8px;
-
-    color: #ccc;
-
-    font-size: 11px;
-}
-
-
-/* ================= REMOVE ================= */
-
-.remove-button {
-    position: absolute;
-
-    top: 10px;
-    right: 10px;
-
-    width: 34px;
-    height: 34px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: rgba(0, 0, 0, .75);
-
-    color: #fff;
-
-    cursor: pointer;
-
-    display: flex;
-
     align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-
-    transition:
-        opacity .2s ease,
-        background .2s ease;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--text-gray);
 }
 
-.my-list-card:hover .remove-button {
-    opacity: 1;
-}
-
-.remove-button:hover {
-    background: var(--red);
-}
-
-
-/* ================= EMPTY ================= */
+/* Empty State */
 
 .empty-list {
-    min-height: 400px;
-
-    display: none;
-
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    flex-direction: column;
-
     text-align: center;
+    padding: 80px 20px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.empty-list i {
-    font-size: 55px;
-
-    color: #555;
-
+.empty-icon {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.2);
     margin-bottom: 20px;
 }
 
 .empty-list h2 {
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
 }
 
 .empty-list p {
-    color: #999;
-
-    margin-bottom: 25px;
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 28px;
 }
 
-.empty-list a {
-    padding: 12px 22px;
-
+.btn-browse {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
     border-radius: 4px;
-
-    background: #fff;
-
-    color: #000;
-
-    text-decoration: none;
-
+    background: var(--netflix-red);
+    color: var(--white);
     font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 1100px) {
-
-    .my-list-grid {
-        grid-template-columns:
-            repeat(5, 1fr);
-    }
-
-}
-
-@media (max-width: 850px) {
-
-    .my-list-grid {
-        grid-template-columns:
-            repeat(4, 1fr);
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    .my-list-header {
-        padding: 0 20px;
-    }
-
-    .my-list-page {
-        padding: 30px 20px;
-    }
-
-    .my-list-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 10px;
-    }
-
-    .my-list-card:hover {
-        transform: none;
-    }
-
-    .my-list-overlay {
-        opacity: 1;
-    }
-
-    .remove-button {
-        opacity: 1;
-    }
-
+.btn-browse:hover {
+    background: #f40612;
+    transform: scale(1.04);
 }

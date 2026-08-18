@@ -4,130 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Search - Netflix</title>
-     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    >
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
 
-    <link rel="stylesheet" href="/css/search.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/search.css">
 </head>
 
 <body>
 
     <!-- ================= HEADER ================= -->
-
     <header class="search-header">
-
-        <a href="browse.html" class="netflix-logo">
+        <a href="browse.html" class="netflix-logo" aria-label="Netflix Home">
             NETFLIX
         </a>
 
         <a href="browse.html" class="back-button">
             <i class="fa-solid fa-arrow-left"></i>
-            Browse
+            <span>Browse</span>
         </a>
-
     </header>
 
-
-    <!-- ================= SEARCH ================= -->
-
+    <!-- ================= SEARCH MAIN ================= -->
     <main class="search-page">
 
+        <!-- SEARCH INPUT BOX -->
         <div class="search-box">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <input
                 type="text"
                 id="search-input"
-                placeholder="Search for movies, shows and more..."
+                placeholder="Search for movies, TV shows, genres, actors..."
                 autocomplete="off"
+                autofocus
             >
-
-            <button
-                id="clear-search"
-                aria-label="Clear search"
-            >
+            <button id="clear-search" aria-label="Clear search" style="display: none;">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-
         </div>
 
+        <!-- SEARCH FILTERS -->
+        <div class="search-filters">
+            <button class="search-filter-tag active" data-genre="All">All</button>
+            <button class="search-filter-tag" data-genre="Action">Action</button>
+            <button class="search-filter-tag" data-genre="Comedy">Comedy</button>
+            <button class="search-filter-tag" data-genre="Horror">Horror</button>
+            <button class="search-filter-tag" data-genre="Romance">Romance</button>
+            <button class="search-filter-tag" data-genre="Drama">Drama</button>
+            <button class="search-filter-tag" data-genre="Fantasy">Fantasy</button>
+        </div>
 
-        <!-- ================= SEARCH INFO ================= -->
+        <!-- SEARCH HISTORY -->
+        <div class="search-history-section" id="search-history-section" style="display: none;">
+            <div class="history-header">
+                <span>Recent Searches</span>
+                <button id="clear-history-btn">Clear History</button>
+            </div>
+            <div class="history-chips" id="history-chips"></div>
+        </div>
 
+        <!-- SEARCH HEADING INFO -->
         <div class="search-heading">
-
-            <h1 id="search-title">
-                Explore Movies & Shows
-            </h1>
-
+            <h1 id="search-title">Explore Movies & TV Shows</h1>
             <p id="result-count"></p>
-
         </div>
 
+        <!-- RESULTS GRID -->
+        <section class="search-results" id="search-results"></section>
 
-        <!-- ================= RESULTS ================= -->
-
-        <section
-            class="search-results"
-            id="search-results"
-        ></section>
-
-
-        <!-- ================= EMPTY STATE ================= -->
-
-        <div
-            class="empty-state"
-            id="empty-state"
-        >
-
+        <!-- EMPTY STATE -->
+        <div class="empty-state" id="empty-state">
             <i class="fa-solid fa-film"></i>
-
-            <h2>
-                Find your next favorite
-            </h2>
-
-            <p>
-                Search for movies, shows, genres or titles.
-            </p>
-
+            <h2>Find your next favorite title</h2>
+            <p>Type above to search titles, actors, genres, or select one of the category tags.</p>
         </div>
 
-
-        <!-- ================= NO RESULTS ================= -->
-
-        <div
-            class="no-results"
-            id="no-results"
-        >
-
+        <!-- NO RESULTS STATE -->
+        <div class="no-results" id="no-results" style="display: none;">
             <i class="fa-solid fa-face-frown"></i>
-
-            <h2>
-                No results found
-            </h2>
-
-            <p>
-                Try searching for another movie or show.
-            </p>
-
+            <h2>No matching titles found</h2>
+            <p>Try searching for a different keyword or browse popular titles in Home.</p>
         </div>
 
     </main>
 
-
-    <!-- ================= SCRIPT ================= -->
-
-    <script src="/javascript/movies.js"></script>
-    <script src="/javascript/search.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="../javascript/movies.js"></script>
+    <script src="../javascript/search.js"></script>
 
 </body>
 

@@ -14,10 +14,18 @@ const movies = [
         trailer: "b9EkMc79ZSU",
         year: "2025",
         rating: "16+",
+        score: "8.7",
+        quality: "4K Ultra HD",
         seasons: "4 Seasons",
+        duration: "50m per ep",
         genre: "Drama",
-        description:
-            "When a young boy vanishes, a small town uncovers a mystery involving secret experiments and terrifying supernatural forces."
+        cast: ["Millie Bobby Brown", "Finn Wolfhard", "Winona Ryder", "David Harbour"],
+        director: "The Duffer Brothers",
+        description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: true,
+        top10Rank: 1
     },
 
     {
@@ -26,10 +34,18 @@ const movies = [
         trailer: "Di310WS8zLk",
         year: "2025",
         rating: "13+",
+        score: "8.1",
+        quality: "4K Ultra HD",
         seasons: "2 Seasons",
+        duration: "45m per ep",
         genre: "Fantasy",
-        description:
-            "Wednesday Addams investigates mysterious events while navigating life at Nevermore Academy."
+        cast: ["Jenna Ortega", "Gwendoline Christie", "Riki Lindhome", "Christina Ricci"],
+        director: "Tim Burton",
+        description: "Wednesday Addams investigates mysterious events while navigating life, rivalries and supernatural secrets at Nevermore Academy.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: true,
+        top10Rank: 2
     },
 
     {
@@ -38,10 +54,18 @@ const movies = [
         trailer: "oqxAJKy0ii4",
         year: "2024",
         rating: "16+",
+        score: "8.0",
+        quality: "4K Ultra HD",
         seasons: "3 Seasons",
+        duration: "55m per ep",
         genre: "Thriller",
-        description:
-            "Hundreds of desperate contestants compete in mysterious games for a life-changing prize."
+        cast: ["Lee Jung-jae", "Park Hae-soo", "Wi Ha-joon", "Hoyeon"],
+        director: "Hwang Dong-hyuk",
+        description: "Hundreds of cash-strapped players accept a strange invitation to compete in children's games for an alluring high-stakes prize with deadly consequences.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: true,
+        top10Rank: 3
     },
 
     {
@@ -50,10 +74,18 @@ const movies = [
         trailer: "_InqQJRqGW4",
         year: "2021",
         rating: "16+",
+        score: "8.2",
+        quality: "HD",
         seasons: "5 Parts",
+        duration: "45m per ep",
         genre: "Crime",
-        description:
-            "A criminal mastermind and his team attempt an ambitious heist against impossible odds."
+        cast: ["Álvaro Morte", "Úrsula Corberó", "Itziar Ituño", "Pedro Alonso"],
+        director: "Álex Pina",
+        description: "Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal mastermind manipulates the police to carry out his plan.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: true,
+        top10Rank: 4
     },
 
     {
@@ -62,10 +94,18 @@ const movies = [
         trailer: "ndl1W4ltcmg",
         year: "2023",
         rating: "16+",
+        score: "8.1",
+        quality: "4K Ultra HD",
         seasons: "3 Seasons",
+        duration: "1h per ep",
         genre: "Fantasy",
-        description:
-            "A monster hunter struggles to find his place in a dangerous world."
+        cast: ["Henry Cavill", "Anya Chalotra", "Freya Allan", "Joey Batey"],
+        director: "Lauren Schmidt Hissrich",
+        description: "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: true,
+        top10Rank: 5
     },
 
     {
@@ -74,10 +114,18 @@ const movies = [
         trailer: "ESEUoa-mz2c",
         year: "2020",
         rating: "16+",
+        score: "8.7",
+        quality: "4K Ultra HD",
         seasons: "3 Seasons",
+        duration: "50m per ep",
         genre: "Sci-Fi",
-        description:
-            "Four families uncover a mystery that spans several generations."
+        cast: ["Louis Hofmann", "Karoline Eichhorn", "Lisa Vicari", "Oliver Masucci"],
+        director: "Baran bo Odar",
+        description: "A missing child sets four families on a frantic hunt for answers as they unearth a mind-bending mystery that spans three generations.",
+        isNetflixOriginal: true,
+        isTrending: false,
+        isTop10: true,
+        top10Rank: 6
     },
 
     {
@@ -86,10 +134,18 @@ const movies = [
         trailer: "YDbnY9Obsfs",
         year: "2025",
         rating: "16+",
+        score: "7.7",
+        quality: "4K Ultra HD",
         seasons: "2 Seasons",
+        duration: "45m per ep",
         genre: "Action",
-        description:
-            "An FBI agent answers a mysterious phone call that pulls him into a dangerous conspiracy."
+        cast: ["Gabriel Basso", "Luciane Buchanan", "Fola Evans-Akingbola"],
+        director: "Shawn Ryan",
+        description: "While monitoring an emergency line, a low-level FBI agent answers a call that plunges him into a deadly conspiracy involving a mole at the White House.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: true,
+        top10Rank: 7
     },
 
     {
@@ -98,10 +154,18 @@ const movies = [
         trailer: "0DAmWHxeoKw",
         year: "2024",
         rating: "16+",
+        score: "7.9",
+        quality: "HD",
         seasons: "4 Seasons",
+        duration: "50m per ep",
         genre: "Fantasy",
-        description:
-            "A dysfunctional family of superheroes reunites to prevent an impending apocalypse."
+        cast: ["Elliot Page", "Tom Hopper", "David Castañeda", "Emmy Raver-Lampman"],
+        director: "Steve Blackman",
+        description: "Reunited by their father's death, estranged siblings with extraordinary powers uncover shocking family secrets — and a threat to humanity.",
+        isNetflixOriginal: true,
+        isTrending: false,
+        isTop10: true,
+        top10Rank: 8
     },
 
     {
@@ -110,10 +174,18 @@ const movies = [
         trailer: "oVzVdvGIC7U",
         year: "2022",
         rating: "16+",
+        score: "8.8",
+        quality: "4K Ultra HD",
         seasons: "6 Seasons",
+        duration: "55m per ep",
         genre: "Drama",
-        description:
-            "A powerful crime family builds an empire in post-war Birmingham."
+        cast: ["Cillian Murphy", "Paul Anderson", "Helen McCrory", "Tom Hardy"],
+        director: "Steven Knight",
+        description: "A notorious gang in 1919 Birmingham, England, is led by the fierce Tommy Shelby, a crime boss set on moving up in the world no matter the cost.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: true,
+        top10Rank: 9
     },
 
     {
@@ -122,15 +194,22 @@ const movies = [
         trailer: "gpv7ayf_tyE",
         year: "2024",
         rating: "13+",
+        score: "7.4",
+        quality: "4K Ultra HD",
         seasons: "3 Seasons",
+        duration: "1h per ep",
         genre: "Romance",
-        description:
-            "The Bridgerton family navigates love, society and scandal in Regency-era London."
+        cast: ["Nicola Coughlan", "Luke Newton", "Jonathan Bailey", "Simone Ashley"],
+        director: "Chris Van Dusen",
+        description: "The eight close-knit siblings of the Bridgerton family look for love and happiness in London high society, guided by Lady Whistledown's scandalous newsletters.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: true,
+        top10Rank: 10
     },
 
-
     // =====================================================
-    // ACTION
+    // ACTION MOVIES
     // =====================================================
 
     {
@@ -139,10 +218,17 @@ const movies = [
         trailer: "COv52Qyctws",
         year: "2023",
         rating: "16+",
+        score: "7.5",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 49m",
         genre: "Action",
-        description:
-            "A man driven by a personal vendetta fights corruption and seeks justice."
+        cast: ["Shah Rukh Khan", "Nayanthara", "Vijay Sethupathi", "Deepika Padukone"],
+        director: "Atlee",
+        description: "A high-octane action thriller highlighting the emotional journey of a man who is set to rectify the wrongs in society.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -151,10 +237,17 @@ const movies = [
         trailer: "vqu4z34wENw",
         year: "2023",
         rating: "16+",
+        score: "6.9",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 26m",
         genre: "Action",
-        description:
-            "An Indian spy returns from exile to stop a dangerous enemy."
+        cast: ["Shah Rukh Khan", "Deepika Padukone", "John Abraham", "Dimple Kapadia"],
+        director: "Siddharth Anand",
+        description: "An Indian agent races against time to stop a ruthless mercenary with a deadly weapon from attacking his country.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -163,10 +256,17 @@ const movies = [
         trailer: "L6P3nI6VnlY",
         year: "2020",
         rating: "16+",
+        score: "6.8",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 56m",
         genre: "Action",
-        description:
-            "A black-market mercenary must rescue a kidnapped boy."
+        cast: ["Chris Hemsworth", "Rudhraksh Jaiswal", "Randeep Hooda", "Golshifteh Farahani"],
+        director: "Sam Hargrave",
+        description: "A hardened mercenary's mission becomes a soul-searching race to survive when he's sent into Bangladesh to rescue a drug lord's kidnapped son.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -175,22 +275,36 @@ const movies = [
         trailer: "Y274jZs5s7s",
         year: "2023",
         rating: "16+",
+        score: "7.0",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 02m",
         genre: "Action",
-        description:
-            "A wounded mercenary returns for another dangerous rescue mission."
+        cast: ["Chris Hemsworth", "Golshifteh Farahani", "Tornike Gogrichiani", "Idris Elba"],
+        director: "Sam Hargrave",
+        description: "Back from the brink of death, highly skilled commando Tyler Rake embarks on another dangerous mission: saving the imprisoned family of a ruthless gangster.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: false
     },
 
     {
         id: 15,
-        title: "Brahmāstra",
+        title: "Brahmāstra Part One: Shiva",
         trailer: "BUjXzrgntcY",
         year: "2022",
         rating: "13+",
+        score: "5.6",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 47m",
         genre: "Fantasy",
-        description:
-            "A young man discovers a mysterious connection to ancient powers."
+        cast: ["Ranbir Kapoor", "Alia Bhatt", "Amitabh Bachchan", "Nagarjuna Akkineni"],
+        director: "Ayan Mukerji",
+        description: "A DJ with a mysterious connection to fire discovers his destiny as a guardian of ancient weapons and must protect the world from dark forces.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -199,10 +313,17 @@ const movies = [
         trailer: "NgBoMJy386M",
         year: "2022",
         rating: "16+",
+        score: "7.8",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "3h 07m",
         genre: "Action",
-        description:
-            "Two legendary revolutionaries form an extraordinary friendship."
+        cast: ["N.T. Rama Rao Jr.", "Ram Charan", "Ajay Devgn", "Alia Bhatt"],
+        director: "S.S. Rajamouli",
+        description: "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -211,10 +332,17 @@ const movies = [
         trailer: "JKa05nyUmuQ",
         year: "2022",
         rating: "16+",
+        score: "8.3",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 48m",
         genre: "Action",
-        description:
-            "Rocky faces powerful enemies while fighting for control of the gold fields."
+        cast: ["Yash", "Sanjay Dutt", "Raveena Tandon", "Srinidhi Shetty"],
+        director: "Prashanth Neel",
+        description: "In the blood-soaked Kolar Gold Fields, Rocky's name strikes fear into his foes. While his allies look up to him, the government sees him as a threat.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -223,10 +351,17 @@ const movies = [
         trailer: "C0BMx-qxsP4",
         year: "2014",
         rating: "16+",
+        score: "7.4",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 41m",
         genre: "Action",
-        description:
-            "A legendary assassin returns to the criminal underworld."
+        cast: ["Keanu Reeves", "Michael Nyqvist", "Alfie Allen", "Willem Dafoe"],
+        director: "Chad Stahelski",
+        description: "An ex-hitman comes out of retirement to track down the gangsters that took everything from him, embarking on an unrelenting rampage.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -235,10 +370,17 @@ const movies = [
         trailer: "XGk2EfbD_Ps",
         year: "2017",
         rating: "16+",
+        score: "7.4",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 02m",
         genre: "Action",
-        description:
-            "John Wick is forced back into the dangerous world of assassins."
+        cast: ["Keanu Reeves", "Riccardo Scamarcio", "Ian McShane", "Common"],
+        director: "Chad Stahelski",
+        description: "Bound by an unbreakable blood oath, legendary assassin John Wick travels to Rome to square off against the world's deadliest killers.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -247,10 +389,17 @@ const movies = [
         trailer: "qEVUtrk8_B4",
         year: "2023",
         rating: "16+",
+        score: "7.7",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 49m",
         genre: "Action",
-        description:
-            "John Wick discovers a path to defeating the High Table."
+        cast: ["Keanu Reeves", "Donnie Yen", "Bill Skarsgård", "Laurence Fishburne"],
+        director: "Chad Stahelski",
+        description: "John Wick uncovers a path to defeating the High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -259,10 +408,17 @@ const movies = [
         trailer: "wb49-oV0F78",
         year: "2018",
         rating: "13+",
+        score: "7.7",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 27m",
         genre: "Action",
-        description:
-            "Ethan Hunt faces a dangerous global threat."
+        cast: ["Tom Cruise", "Henry Cavill", "Ving Rhames", "Simon Pegg"],
+        director: "Christopher McQuarrie",
+        description: "When an IMF mission ends badly, Ethan Hunt and his team must race against time to stop nuclear weapons from falling into the wrong hands.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -271,10 +427,17 @@ const movies = [
         trailer: "giXco2jaZ_4",
         year: "2022",
         rating: "13+",
+        score: "8.3",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 11m",
         genre: "Action",
-        description:
-            "A legendary pilot returns to train a new generation."
+        cast: ["Tom Cruise", "Miles Teller", "Jennifer Connelly", "Jon Hamm"],
+        director: "Joseph Kosinski",
+        description: "After thirty years of service as a top naval aviator, Pete 'Maverick' Mitchell trains a detachment of graduates for a specialized, dangerous mission.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -283,10 +446,17 @@ const movies = [
         trailer: "BmllggGO4pM",
         year: "2022",
         rating: "16+",
+        score: "6.5",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 02m",
         genre: "Action",
-        description:
-            "A highly skilled operative becomes the target of an international manhunt."
+        cast: ["Ryan Gosling", "Chris Evans", "Ana de Armas", "Dhanush"],
+        director: "Anthony Russo, Joe Russo",
+        description: "When a shadowy CIA agent uncovers agency secrets, a psychopathic former colleague puts a bounty on his head and sets off a global manhunt.",
+        isNetflixOriginal: true,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -295,10 +465,17 @@ const movies = [
         trailer: "tI1JGPhYBS8",
         year: "2021",
         rating: "18+",
+        score: "5.8",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 28m",
         genre: "Action",
-        description:
-            "A group of mercenaries enters a zombie-infested Las Vegas."
+        cast: ["Dave Bautista", "Ella Purnell", "Omari Hardwick", "Ana de la Reguera"],
+        director: "Zack Snyder",
+        description: "After a zombie outbreak in Las Vegas, a group of mercenaries takes the ultimate gamble by venturing into the quarantine zone for the greatest heist ever attempted.",
+        isNetflixOriginal: true,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -307,10 +484,17 @@ const movies = [
         trailer: "X0tOpBuYasI",
         year: "2022",
         rating: "13+",
+        score: "6.2",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 05m",
         genre: "Action",
-        description:
-            "An ancient superpowered hero is released into the modern world."
+        cast: ["Dwayne Johnson", "Aldis Hodge", "Pierce Brosnan", "Noah Centineo"],
+        director: "Jaume Collet-Serra",
+        description: "Nearly 5,000 years after he was bestowed with the powers of the ancient gods, Black Adam is freed from his earthly tomb to unleash his unique justice.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -319,10 +503,17 @@ const movies = [
         trailer: "mqqft2x_Aa4",
         year: "2022",
         rating: "13+",
+        score: "7.8",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 56m",
         genre: "Action",
-        description:
-            "Batman investigates a series of crimes connected to Gotham's elite."
+        cast: ["Robert Pattinson", "Zoë Kravitz", "Paul Dano", "Colin Farrell"],
+        director: "Matt Reeves",
+        description: "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -331,10 +522,17 @@ const movies = [
         trailer: "WDkg3h8PCVU",
         year: "2018",
         rating: "13+",
+        score: "6.8",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 23m",
         genre: "Action",
-        description:
-            "Arthur Curry discovers his destiny as ruler of Atlantis."
+        cast: ["Jason Momoa", "Amber Heard", "Willem Dafoe", "Patrick Wilson"],
+        director: "James Wan",
+        description: "Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -343,10 +541,17 @@ const movies = [
         trailer: "u9Mv98Gr5pY",
         year: "2018",
         rating: "13+",
+        score: "6.6",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 52m",
         genre: "Action",
-        description:
-            "A journalist becomes host to a powerful alien symbiote."
+        cast: ["Tom Hardy", "Michelle Williams", "Riz Ahmed", "Scott Haze"],
+        director: "Ruben Fleischer",
+        description: "A reporter bounds with an alien symbiote that gives him extraordinary superpowers, turning him into the antihero known as Venom.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -355,10 +560,17 @@ const movies = [
         trailer: "xjDjIWPwcPU",
         year: "2018",
         rating: "13+",
+        score: "7.3",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 14m",
         genre: "Action",
-        description:
-            "A young king must defend his nation from a powerful enemy."
+        cast: ["Chadwick Boseman", "Michael B. Jordan", "Lupita Nyong'o", "Danai Gurira"],
+        director: "Ryan Coogler",
+        description: "T'Challa, heir to the hidden Kingdom of Wakanda, must step forward to lead his people into a new era and confront a challenger from his country's past.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -367,15 +579,21 @@ const movies = [
         trailer: "TcMBFSGVi1c",
         year: "2019",
         rating: "13+",
+        score: "8.4",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "3h 01m",
         genre: "Action",
-        description:
-            "The Avengers attempt to undo the devastating events of the past."
+        cast: ["Robert Downey Jr.", "Chris Evans", "Mark Ruffalo", "Chris Hemsworth"],
+        director: "Anthony Russo, Joe Russo",
+        description: "After devastating events wipe out half the universe, the remaining Avengers assemble once more to reverse Thanos' actions and restore balance.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
-
     // =====================================================
-    // COMEDY
+    // COMEDY MOVIES
     // =====================================================
 
     {
@@ -384,10 +602,17 @@ const movies = [
         trailer: "tcdUhdOlz9M",
         year: "2009",
         rating: "18+",
+        score: "7.7",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 40m",
         genre: "Comedy",
-        description:
-            "Three friends wake up after a wild bachelor party with no memory of what happened."
+        cast: ["Bradley Cooper", "Ed Helms", "Zach Galifianakis", "Justin Bartha"],
+        director: "Todd Phillips",
+        description: "Three buddies wake up from a bachelor party in Las Vegas with no memory of the previous night and the groom missing. They make their way around the city in order to find him.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -396,10 +621,17 @@ const movies = [
         trailer: "X2m-08cOAbc",
         year: "2021",
         rating: "13+",
+        score: "7.1",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 55m",
         genre: "Comedy",
-        description:
-            "A bank employee discovers that he is actually a background character in a video game."
+        cast: ["Ryan Reynolds", "Jodie Comer", "Taika Waititi", "Lil Rel Howery"],
+        director: "Shawn Levy",
+        description: "A bank teller discovers he is actually a background player in an open-world video game, and decides to become the hero of his own story.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -408,23 +640,18 @@ const movies = [
         trailer: "Pj0wz7zu3Ms",
         year: "2021",
         rating: "13+",
+        score: "6.3",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 58m",
         genre: "Comedy",
-        description:
-            "An FBI agent teams up with a notorious thief."
+        cast: ["Dwayne Johnson", "Ryan Reynolds", "Gal Gadot", "Ritu Arya"],
+        director: "Rawson Marshall Thurber",
+        description: "An FBI profiler pursuing the world's most wanted art thief becomes his reluctant partner in crime to catch an elusive criminal who's always one step ahead.",
+        isNetflixOriginal: true,
+        isTrending: true,
+        isTop10: false
     },
-
-    // {
-    //     id: 34,
-    //     title: "Central Intelligence",
-    //     trailer: "0GQxZ-0w1Yc",
-    //     year: "2016",
-    //     rating: "13+",
-    //     seasons: "Movie",
-    //     genre: "Comedy",
-    //     description:
-    //         "Two old classmates become involved in an unexpected spy adventure."
-    // },
 
     {
         id: 35,
@@ -432,10 +659,17 @@ const movies = [
         trailer: "qmxMAdV6s4U",
         year: "2018",
         rating: "16+",
+        score: "7.0",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 40m",
         genre: "Comedy",
-        description:
-            "A friendly game night turns into a real-life mystery."
+        cast: ["Jason Bateman", "Rachel McAdams", "Kyle Chandler", "Sharon Horgan"],
+        director: "John Francis Daley, Jonathan Goldstein",
+        description: "A group of friends who meet regularly for game nights find themselves entangled in a real-life mystery when the charismatic brother of one of them is kidnapped.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -444,10 +678,17 @@ const movies = [
         trailer: "0Vsy5KzsieQ",
         year: "2013",
         rating: "16+",
+        score: "7.0",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 50m",
         genre: "Comedy",
-        description:
-            "A small-time dealer creates a fake family for a dangerous trip."
+        cast: ["Jennifer Aniston", "Jason Sudeikis", "Emma Roberts", "Will Poulter"],
+        director: "Rawson Marshall Thurber",
+        description: "A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -456,10 +697,17 @@ const movies = [
         trailer: "2QKg5SZ_35I",
         year: "2017",
         rating: "13+",
+        score: "6.9",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 59m",
         genre: "Comedy",
-        description:
-            "Teenagers are transported into a video game."
+        cast: ["Dwayne Johnson", "Kevin Hart", "Jack Black", "Karen Gillan"],
+        director: "Jake Kasdan",
+        description: "Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -468,47 +716,18 @@ const movies = [
         trailer: "hOqVRwGVUkA",
         year: "1994",
         rating: "13+",
+        score: "6.9",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 41m",
         genre: "Comedy",
-        description:
-            "A shy man discovers a mysterious mask with magical powers."
+        cast: ["Jim Carrey", "Cameron Diaz", "Peter Riegert", "Peter Greene"],
+        director: "Chuck Russell",
+        description: "Bank clerk Stanley Ipkiss is transformed into a manic superhero when he puts on a mysterious wooden mask.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
-
-    // {
-    //     id: 39,
-    //     title: "Rush Hour",
-    //     trailer: "JMiFsFQcFLE",
-    //     year: "1998",
-    //     rating: "13+",
-    //     seasons: "Movie",
-    //     genre: "Comedy",
-    //     description:
-    //         "Two very different detectives must work together."
-    // },
-
-    // {
-    //     id: 40,
-    //     title: "Rush Hour 2",
-    //     trailer: "sZyYx4rM2J0",
-    //     year: "2001",
-    //     rating: "13+",
-    //     seasons: "Movie",
-    //     genre: "Comedy",
-    //     description:
-    //         "The unlikely detective duo returns for another adventure."
-    // },
-
-    // {
-    //     id: 41,
-    //     title: "Mr Bean's Holiday",
-    //     trailer: "h6t9b8c7q2M",
-    //     year: "2007",
-    //     rating: "7+",
-    //     seasons: "Movie",
-    //     genre: "Comedy",
-    //     description:
-    //         "Mr Bean travels to France and creates a series of hilarious situations."
-    // },
 
     {
         id: 42,
@@ -516,13 +735,18 @@ const movies = [
         trailer: "l13yPhimE3o",
         year: "1994",
         rating: "13+",
+        score: "7.3",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 47m",
         genre: "Comedy",
-        description:
-            "Two foolish friends embark on an unexpected road trip."
+        cast: ["Jim Carrey", "Jeff Daniels", "Lauren Holly", "Karen Duffy"],
+        director: "Peter Farrelly, Bobby Farrelly",
+        description: "After a woman leaves a briefcase at the airport, two extremely dim-witted friends go on a cross-country road trip to Aspen to return it.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
-
-     
 
     {
         id: 44,
@@ -530,76 +754,40 @@ const movies = [
         trailer: "4eaZ_48ZYog",
         year: "2007",
         rating: "16+",
+        score: "7.6",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 53m",
         genre: "Comedy",
-        description:
-            "Two high school friends try to make the most of their final days together."
+        cast: ["Jonah Hill", "Michael Cera", "Christopher Mintz-Plasse", "Bill Hader"],
+        director: "Greg Mottola",
+        description: "Two co-dependent high school seniors deal with separation anxiety after their plan to host a liquor-fueled party goes awry.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
- 
 
     {
         id: 46,
-        title: "We're the Millers 2",
+        title: "The Misadventures",
         trailer: "0Vsy5KzsieQ",
         year: "2025",
         rating: "16+",
+        score: "6.8",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 45m",
         genre: "Comedy",
-        description:
-            "A group of unlikely companions finds themselves in another chaotic adventure."
+        cast: ["Jason Sudeikis", "Kathryn Hahn", "Will Poulter"],
+        director: "Rawson Marshall Thurber",
+        description: "A group of unlikely companions finds themselves in another chaotic, hilarious road trip filled with unexpected mishaps.",
+        isNetflixOriginal: true,
+        isTrending: false,
+        isTop10: false
     },
 
-    // {
-    //     id: 47,
-    //     title: "The Other Guys",
-    //     trailer: "oEfp6Wj1X8M",
-    //     year: "2010",
-    //     rating: "13+",
-    //     seasons: "Movie",
-    //     genre: "Comedy",
-    //     description:
-    //         "Two overlooked detectives get their chance to become heroes."
-    // },
-
-    // {
-    //     id: 48,
-    //     title: "Due Date",
-    //     trailer: "hT3Z8R3m9bA",
-    //     year: "2010",
-    //     rating: "16+",
-    //     seasons: "Movie",
-    //     genre: "Comedy",
-    //     description:
-    //         "Two strangers embark on a chaotic road trip."
-    // },
-
-    // {
-    //     id: 49,
-    //     title: "Central Intelligence 2",
-    //     trailer: "0GQxZ-0w1Yc",
-    //     year: "2025",
-    //     rating: "13+",
-    //     seasons: "Movie",
-    //     genre: "Comedy",
-    //     description:
-    //         "An unexpected partnership leads to another hilarious adventure."
-    // },
-
-    // {
-    //     id: 50,
-    //     title: "The Internship",
-    //     trailer: "cdnoqCViqUo",
-    //     year: "2013",
-    //     rating: "13+",
-    //     seasons: "Movie",
-    //     genre: "Comedy",
-    //     description:
-    //         "Two salesmen attempt to restart their careers as interns."
-    // },
-
-
     // =====================================================
-    // HORROR
+    // HORROR MOVIES
     // =====================================================
 
     {
@@ -608,10 +796,17 @@ const movies = [
         trailer: "k10ETZ41q5o",
         year: "2013",
         rating: "16+",
+        score: "7.5",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 52m",
         genre: "Horror",
-        description:
-            "Paranormal investigators help a family terrorized by a dark presence."
+        cast: ["Vera Farmiga", "Patrick Wilson", "Lili Taylor", "Ron Livingston"],
+        director: "James Wan",
+        description: "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -620,10 +815,17 @@ const movies = [
         trailer: "VFsmuRPClr4",
         year: "2016",
         rating: "16+",
+        score: "7.3",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 14m",
         genre: "Horror",
-        description:
-            "A paranormal investigation takes place in a haunted London home."
+        cast: ["Vera Farmiga", "Patrick Wilson", "Frances O'Connor", "Madison Wolfe"],
+        director: "James Wan",
+        description: "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by malicious spirits.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -632,10 +834,17 @@ const movies = [
         trailer: "xKJmEC5ieOk",
         year: "2017",
         rating: "16+",
+        score: "7.3",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 15m",
         genre: "Horror",
-        description:
-            "A group of children confronts a terrifying entity."
+        cast: ["Bill Skarsgård", "Jaeden Martell", "Finn Wolfhard", "Sophia Lillis"],
+        director: "Andy Muschietti",
+        description: "In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on children.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -644,10 +853,17 @@ const movies = [
         trailer: "bKL1ImsN-DU",
         year: "2019",
         rating: "16+",
+        score: "6.5",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 49m",
         genre: "Horror",
-        description:
-            "The Losers Club returns to confront their childhood nightmare."
+        cast: ["Jessica Chastain", "James McAvoy", "Bill Hader", "Bill Skarsgård"],
+        director: "Andy Muschietti",
+        description: "Twenty-seven years after their first encounter with the terrifying Pennywise, the Losers Club have grown up and moved away, until a devastating phone call brings them back.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -656,10 +872,17 @@ const movies = [
         trailer: "WR7cc5t7tv8",
         year: "2018",
         rating: "16+",
+        score: "7.5",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 30m",
         genre: "Horror",
-        description:
-            "A family survives in silence while creatures hunt by sound."
+        cast: ["Emily Blunt", "John Krasinski", "Millicent Simmonds", "Noah Jupe"],
+        director: "John Krasinski",
+        description: "In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -668,10 +891,17 @@ const movies = [
         trailer: "BpdDN9d9Jio",
         year: "2021",
         rating: "16+",
+        score: "7.2",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 37m",
         genre: "Horror",
-        description:
-            "A family ventures into a dangerous world filled with creatures."
+        cast: ["Emily Blunt", "Cillian Murphy", "Millicent Simmonds", "Noah Jupe"],
+        director: "John Krasinski",
+        description: "Following the events at home, the Abbott family now face the terrors of the outside world as they continue their fight for survival in silence.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -680,10 +910,17 @@ const movies = [
         trailer: "zuZnRUcoWos",
         year: "2010",
         rating: "16+",
+        score: "6.8",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 43m",
         genre: "Horror",
-        description:
-            "A family discovers that something supernatural has entered their home."
+        cast: ["Patrick Wilson", "Rose Byrne", "Lin Shaye", "Ty Simpkins"],
+        director: "James Wan",
+        description: "A family looks to prevent evil spirits from trapping their comatose child in a realm called The Further.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -692,13 +929,18 @@ const movies = [
         trailer: "fBbi4NeebAk",
         year: "2013",
         rating: "16+",
+        score: "6.6",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 46m",
         genre: "Horror",
-        description:
-            "The Lambert family continues to face supernatural forces."
+        cast: ["Patrick Wilson", "Rose Byrne", "Barbara Hershey", "Lin Shaye"],
+        director: "James Wan",
+        description: "The Lamberts attempt to uncover the mysterious childhood secret that has left them dangerously connected to the spirit world.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
-
- 
 
     {
         id: 60,
@@ -706,10 +948,17 @@ const movies = [
         trailer: "KisPhy7T__Q",
         year: "2017",
         rating: "16+",
+        score: "6.5",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 49m",
         genre: "Horror",
-        description:
-            "A group of children encounter a sinister doll."
+        cast: ["Stephanie Sigman", "Talitha Bateman", "Lulu Wilson", "Anthony LaPaglia"],
+        director: "David F. Sandberg",
+        description: "12 years after the tragic death of their little girl, a doll-maker and his wife welcome a nun and several girls from a shuttered orphanage into their home.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -718,10 +967,17 @@ const movies = [
         trailer: "pzD9zGcUNrw",
         year: "2018",
         rating: "16+",
+        score: "5.3",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 36m",
         genre: "Horror",
-        description:
-            "A priest investigates the mysterious death of a nun."
+        cast: ["Demián Bichir", "Taissa Farmiga", "Jonas Bloquet", "Bonnie Aarons"],
+        director: "Corin Hardy",
+        description: "A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican to investigate the death of a young nun in Romania.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -730,10 +986,17 @@ const movies = [
         trailer: "QF-oyCwaArU",
         year: "2023",
         rating: "16+",
+        score: "5.6",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 50m",
         genre: "Horror",
-        description:
-            "A supernatural evil returns to haunt a French boarding school."
+        cast: ["Taissa Farmiga", "Jonas Bloquet", "Storm Reid", "Anna Popplewell"],
+        director: "Michael Chaves",
+        description: "1956 – France. A priest is murdered. An evil is spreading. The sequel to the worldwide smash hit follows Sister Irene as she once again comes face-to-face with Valak.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -742,10 +1005,17 @@ const movies = [
         trailer: "BcDK7lkzzsU",
         year: "2022",
         rating: "16+",
+        score: "6.5",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 55m",
         genre: "Horror",
-        description:
-            "A psychiatrist experiences terrifying supernatural events."
+        cast: ["Sosie Bacon", "Jessie T. Usher", "Kyle Gallner", "Kal Penn"],
+        director: "Parker Finn",
+        description: "After witnessing a bizarre, traumatic incident involving a patient, a psychiatrist starts experiencing terrifying occurrences that she can't explain.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -754,23 +1024,36 @@ const movies = [
         trailer: "0HY6QFlBzUY",
         year: "2024",
         rating: "16+",
+        score: "7.1",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 07m",
         genre: "Horror",
-        description:
-            "A pop star begins experiencing terrifying supernatural visions."
+        cast: ["Naomi Scott", "Rosemarie DeWitt", "Lukas Gage", "Miles Gutierrez-Riley"],
+        director: "Parker Finn",
+        description: "About to embark on a new world tour, global pop sensation Skye Riley begins experiencing increasingly terrifying and inexplicable events.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
-   
     {
         id: 66,
         title: "Scream VI",
         trailer: "h74AXqw4Opc",
         year: "2023",
         rating: "16+",
+        score: "6.5",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 02m",
         genre: "Horror",
-        description:
-            "Ghostface follows survivors to New York City."
+        cast: ["Melissa Barrera", "Jenna Ortega", "Courteney Cox", "Jasmin Savoy Brown"],
+        director: "Matt Bettinelli-Olpin, Tyler Gillett",
+        description: "In the next installment, the survivors of the Ghostface killings leave Woodsboro behind and start a fresh chapter in New York City.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -779,10 +1062,17 @@ const movies = [
         trailer: "BU2eYAO31Cc",
         year: "1973",
         rating: "18+",
+        score: "8.1",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 02m",
         genre: "Horror",
-        description:
-            "A young girl becomes the center of a terrifying supernatural battle."
+        cast: ["Ellen Burstyn", "Max von Sydow", "Linda Blair", "Lee J. Cobb"],
+        director: "William Friedkin",
+        description: "When a 12-year-old girl is possessed by a mysterious entity, her mother seeks the help of two priests to save her daughter.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -791,10 +1081,17 @@ const movies = [
         trailer: "yzR2GY-ew8I",
         year: "2002",
         rating: "16+",
+        score: "7.1",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 55m",
         genre: "Horror",
-        description:
-            "A journalist investigates a mysterious cursed videotape."
+        cast: ["Naomi Watts", "Martin Henderson", "Brian Cox", "David Dorfman"],
+        director: "Gore Verbinski",
+        description: "A journalist must investigate a mysterious videotape which seems to cause the death of anyone within a week of viewing it.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -803,17 +1100,21 @@ const movies = [
         trailer: "O2NKzO-fxwQ",
         year: "2004",
         rating: "16+",
+        score: "5.9",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 31m",
         genre: "Horror",
-        description:
-            "A supernatural curse spreads through a haunted house."
+        cast: ["Sarah Michelle Gellar", "Jason Behr", "Clea DuVall", "William Mapother"],
+        director: "Takashi Shimizu",
+        description: "An American nurse living and working in Tokyo is exposed to a mysterious supernatural curse, one that locks a person in a powerful rage.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
-  
-
-
     // =====================================================
-    // ROMANCE
+    // ROMANCE MOVIES
     // =====================================================
 
     {
@@ -822,10 +1123,17 @@ const movies = [
         trailer: "FC6biTjEyZw",
         year: "2004",
         rating: "13+",
+        score: "7.8",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 03m",
         genre: "Romance",
-        description:
-            "Two young lovers are separated by circumstances but never forget each other."
+        cast: ["Ryan Gosling", "Rachel McAdams", "James Garner", "Gena Rowlands"],
+        director: "Nick Cassavetes",
+        description: "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -834,10 +1142,17 @@ const movies = [
         trailer: "Eh993__rOxA",
         year: "2016",
         rating: "13+",
+        score: "7.4",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 50m",
         genre: "Romance",
-        description:
-            "A young woman forms an unexpected bond with a wealthy man she cares for."
+        cast: ["Emilia Clarke", "Sam Claflin", "Janet McTeer", "Charles Dance"],
+        director: "Thea Sharrock",
+        description: "A girl in a small town forms an unlikely bond with a recently-paralyzed man she's taking care of, changing both of their lives forever.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -846,10 +1161,17 @@ const movies = [
         trailer: "0pdqf4P9MB8",
         year: "2016",
         rating: "13+",
+        score: "8.0",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 08m",
         genre: "Romance",
-        description:
-            "An aspiring actress and musician fall in love while pursuing their dreams."
+        cast: ["Ryan Gosling", "Emma Stone", "John Legend", "Rosemarie DeWitt"],
+        director: "Damien Chazelle",
+        description: "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -858,10 +1180,17 @@ const movies = [
         trailer: "kVrqfYjkTdQ",
         year: "1997",
         rating: "13+",
+        score: "7.9",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "3h 14m",
         genre: "Romance",
-        description:
-            "Two people from different worlds fall in love aboard the Titanic."
+        cast: ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane", "Kathy Bates"],
+        director: "James Cameron",
+        description: "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -870,10 +1199,17 @@ const movies = [
         trailer: "555oiY9RWM4",
         year: "2018",
         rating: "13+",
+        score: "7.0",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 39m",
         genre: "Romance",
-        description:
-            "A teenager's secret love letters are unexpectedly sent to her crushes."
+        cast: ["Lana Condor", "Noah Centineo", "Janel Parrish", "Anna Cathcart"],
+        director: "Susan Johnson",
+        description: "A teenage girl's secret love letters are exposed and wreak havoc on her love life when they are mysteriously mailed to all five of her crushes.",
+        isNetflixOriginal: true,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -882,10 +1218,17 @@ const movies = [
         trailer: "9ItBvH5J6ss",
         year: "2014",
         rating: "13+",
+        score: "7.7",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 06m",
         genre: "Romance",
-        description:
-            "Two teenagers form a deep connection while facing difficult circumstances."
+        cast: ["Shailene Woodley", "Ansel Elgort", "Nat Wolff", "Laura Dern"],
+        director: "Josh Boone",
+        description: "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -894,35 +1237,18 @@ const movies = [
         trailer: "ZQ-YX-5bAs0",
         year: "2018",
         rating: "13+",
+        score: "6.9",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 0m",
         genre: "Romance",
-        description:
-            "A young woman discovers that her boyfriend comes from an extremely wealthy family."
+        cast: ["Constance Wu", "Henry Golding", "Michelle Yeoh", "Gemma Chan"],
+        director: "Jon M. Chu",
+        description: "This contemporary romantic comedy follows native New Yorker Rachel Chu as she accompanies her longtime boyfriend to his best friend's wedding in Singapore.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
-
-    // {
-    //     id: 78,
-    //     title: "The Proposal",
-    //     trailer: "XQ7z3n2sP3A",
-    //     year: "2009",
-    //     rating: "13+",
-    //     seasons: "Movie",
-    //     genre: "Romance",
-    //     description:
-    //         "A boss forces her assistant into a fake engagement."
-    // },
-
-    // {
-    //     id: 79,
-    //     title: "About Time",
-    //     trailer: "T7A1YhG3F3M",
-    //     year: "2013",
-    //     rating: "13+",
-    //     seasons: "Movie",
-    //     genre: "Romance",
-    //     description:
-    //         "A young man discovers that the men in his family can travel through time."
-    // },
 
     {
         id: 80,
@@ -930,15 +1256,21 @@ const movies = [
         trailer: "KdzH6a-XEGM",
         year: "2003",
         rating: "13+",
+        score: "7.6",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 15m",
         genre: "Romance",
-        description:
-            "Several interconnected stories explore love during the holiday season."
+        cast: ["Hugh Grant", "Martine McCutcheon", "Liam Neeson", "Colin Firth"],
+        director: "Richard Curtis",
+        description: "Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
-
     // =====================================================
-    // DRAMA
+    // DRAMA MOVIES
     // =====================================================
 
     {
@@ -947,10 +1279,17 @@ const movies = [
         trailer: "PLl99DlL6b4",
         year: "1994",
         rating: "16+",
+        score: "9.3",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 22m",
         genre: "Drama",
-        description:
-            "A banker imprisoned for murder forms an unlikely friendship."
+        cast: ["Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler"],
+        director: "Frank Darabont",
+        description: "Over the course of several years, two convicts form a friendship, seeking consolation and eventual redemption through basic compassion.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -959,10 +1298,17 @@ const movies = [
         trailer: "bLvqoHBptjg",
         year: "1994",
         rating: "13+",
+        score: "8.8",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 22m",
         genre: "Drama",
-        description:
-            "A kind-hearted man experiences extraordinary moments throughout American history."
+        cast: ["Tom Hanks", "Robin Wright", "Gary Sinise", "Sally Field"],
+        director: "Robert Zemeckis",
+        description: "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -971,10 +1317,17 @@ const movies = [
         trailer: "DMOBlEcRuw8",
         year: "2006",
         rating: "13+",
+        score: "8.0",
+        quality: "HD",
         seasons: "Movie",
+        duration: "1h 57m",
         genre: "Drama",
-        description:
-            "A struggling father works to build a better life for his son."
+        cast: ["Will Smith", "Jaden Smith", "Thandiwe Newton", "Brian Howe"],
+        director: "Gabriele Muccino",
+        description: "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional endeavor.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -983,10 +1336,17 @@ const movies = [
         trailer: "lB95KLmpLR4",
         year: "2010",
         rating: "13+",
+        score: "7.8",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 0m",
         genre: "Drama",
-        description:
-            "The story of the creation and rise of a major social network."
+        cast: ["Jesse Eisenberg", "Andrew Garfield", "Justin Timberlake", "Armie Hammer"],
+        director: "David Fincher",
+        description: "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -995,10 +1355,17 @@ const movies = [
         trailer: "7d_jQycdQGo",
         year: "2014",
         rating: "16+",
+        score: "8.5",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "1h 47m",
         genre: "Drama",
-        description:
-            "A young drummer pushes himself under an extremely demanding instructor."
+        cast: ["Miles Teller", "J.K. Simmons", "Paul Reiser", "Melissa Benoist"],
+        director: "Damien Chazelle",
+        description: "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -1007,10 +1374,17 @@ const movies = [
         trailer: "Ki4haFrqSrw",
         year: "1999",
         rating: "16+",
+        score: "8.6",
+        quality: "HD",
         seasons: "Movie",
+        duration: "3h 09m",
         genre: "Drama",
-        description:
-            "A prison guard encounters a mysterious inmate with extraordinary abilities."
+        cast: ["Tom Hanks", "Michael Clarke Duncan", "David Morse", "Bonnie Hunt"],
+        director: "Frank Darabont",
+        description: "A tale set on death row in a Southern prison, where a gentle giant accused of a child murder displays extraordinary healing powers.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -1019,10 +1393,17 @@ const movies = [
         trailer: "PaZVjZEFkRs",
         year: "1997",
         rating: "16+",
+        score: "8.3",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 06m",
         genre: "Drama",
-        description:
-            "A brilliant young man receives help confronting his troubled past."
+        cast: ["Robin Williams", "Matt Damon", "Ben Affleck", "Stellan Skarsgård"],
+        director: "Gus Van Sant",
+        description: "Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -1031,10 +1412,17 @@ const movies = [
         trailer: "iszwuX1AK6A",
         year: "2013",
         rating: "18+",
+        score: "8.2",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "3h 0m",
         genre: "Drama",
-        description:
-            "A stockbroker rises to enormous wealth through reckless ambition."
+        cast: ["Leonardo DiCaprio", "Jonah Hill", "Margot Robbie", "Matthew McConaughey"],
+        director: "Martin Scorsese",
+        description: "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -1043,10 +1431,17 @@ const movies = [
         trailer: "uYPbbksJxIg",
         year: "2023",
         rating: "16+",
+        score: "8.9",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "3h 0m",
         genre: "Drama",
-        description:
-            "The story of the scientist who led the development of the atomic bomb."
+        cast: ["Cillian Murphy", "Emily Blunt", "Matt Damon", "Robert Downey Jr."],
+        director: "Christopher Nolan",
+        description: "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb during World War II.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -1055,15 +1450,21 @@ const movies = [
         trailer: "LoebZZ8K5N0",
         year: "2015",
         rating: "16+",
+        score: "8.0",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 36m",
         genre: "Drama",
-        description:
-            "A frontiersman fights to survive after being betrayed and left for dead."
+        cast: ["Leonardo DiCaprio", "Tom Hardy", "Domhnall Gleeson", "Will Poulter"],
+        director: "Alejandro G. Iñárritu",
+        description: "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
-
     // =====================================================
-    // INDIAN MOVIES
+    // INDIAN / BOLLYWOOD MOVIES
     // =====================================================
 
     {
@@ -1072,10 +1473,17 @@ const movies = [
         trailer: "x_7YlGv9u1g",
         year: "2016",
         rating: "13+",
+        score: "8.3",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 41m",
         genre: "Drama",
-        description:
-            "A former wrestler trains his daughters to become championship wrestlers."
+        cast: ["Aamir Khan", "Sakshi Tanwar", "Fatima Sana Shaikh", "Sanya Malhotra"],
+        director: "Nitesh Tiwari",
+        description: "Former wrestler Mahavir Singh Phogat and his two wrestler daughters struggle towards glory at the Commonwealth Games in the face of societal oppression.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -1084,10 +1492,17 @@ const movies = [
         trailer: "K0eDlFX9GMc",
         year: "2009",
         rating: "13+",
+        score: "8.4",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 50m",
         genre: "Comedy",
-        description:
-            "Three engineering students challenge the pressure of the education system."
+        cast: ["Aamir Khan", "Madhavan", "Mona Singh", "Sharman Joshi", "Kareena Kapoor"],
+        director: "Rajkumar Hirani",
+        description: "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -1096,10 +1511,17 @@ const movies = [
         trailer: "SOXWc32k4tA",
         year: "2014",
         rating: "13+",
+        score: "8.1",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 33m",
         genre: "Comedy",
-        description:
-            "An unusual visitor questions the beliefs and traditions of society."
+        cast: ["Aamir Khan", "Anushka Sharma", "Sushant Singh Rajput", "Sanjay Dutt"],
+        director: "Rajkumar Hirani",
+        description: "An alien on Earth loses the remote control to his spaceship. His innocent questions and childlike curiosity challenge humanity's blind beliefs.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -1108,10 +1530,17 @@ const movies = [
         trailer: "FJrpcDgC3zU",
         year: "2011",
         rating: "13+",
+        score: "8.2",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 35m",
         genre: "Romance",
-        description:
-            "Three friends take a life-changing road trip across Spain."
+        cast: ["Hrithik Roshan", "Farhan Akhtar", "Abhay Deol", "Katrina Kaif", "Kalki Koechlin"],
+        director: "Zoya Akhtar",
+        description: "Three friends decide to turn their fantasy vacation into reality after one of them becomes engaged, discovering love and overcoming fears across Spain.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -1120,10 +1549,17 @@ const movies = [
         trailer: "RiANSSgCuJk",
         year: "2019",
         rating: "18+",
+        score: "7.0",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 53m",
         genre: "Romance",
-        description:
-            "A brilliant but troubled surgeon struggles after losing his love."
+        cast: ["Shahid Kapoor", "Kiara Advani", "Arjan Bajwa", "Suresh Oberoi"],
+        director: "Sandeep Reddy Vanga",
+        description: "Kabir Singh, a senior medical student with anger management issues, goes on a self-destructive path after his girlfriend is forced to marry someone else.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -1132,22 +1568,36 @@ const movies = [
         trailer: "64xJLmcA2K8",
         year: "2015",
         rating: "13+",
+        score: "8.2",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 43m",
         genre: "Thriller",
-        description:
-            "A family man goes to extraordinary lengths to protect his family."
+        cast: ["Ajay Devgn", "Shriya Saran", "Tabu", "Rajat Kapoor"],
+        director: "Nishikant Kamat",
+        description: "Desperate measures are taken by a man who tries to save his family from the dark side of the law after they commit an unexpected crime.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
         id: 97,
         title: "Stree 2",
         trailer: "VlvOgk5BHS4",
-        year: "2018",
+        year: "2024",
         rating: "16+",
+        score: "7.6",
+        quality: "4K Ultra HD",
         seasons: "Movie",
+        duration: "2h 27m",
         genre: "Horror",
-        description:
-            "A mysterious female spirit haunts a small town."
+        cast: ["Rajkummar Rao", "Shraddha Kapoor", "Pankaj Tripathi", "Abhishek Banerjee"],
+        director: "Amar Kaushik",
+        description: "The town of Chanderi is haunted once again, this time by a headless entity known as Sarkata. The townspeople turn to Vicky and his friends for protection.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -1156,10 +1606,17 @@ const movies = [
         trailer: "GGzSId0_qJc",
         year: "2007",
         rating: "13+",
+        score: "7.4",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 39m",
         genre: "Horror",
-        description:
-            "A mysterious haunting begins after an old palace is reopened."
+        cast: ["Akshay Kumar", "Vidya Balan", "Shiney Ahuja", "Amisha Patel"],
+        director: "Priyadarshan",
+        description: "An NRI and his wife decide to stay in his ancestral home, paying no heed to warnings about ghosts. Soon, inexplicable occurrences cause them to call a psychiatrist.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
     {
@@ -1168,10 +1625,17 @@ const movies = [
         trailer: "tsxemFX0a7k",
         year: "2019",
         rating: "13+",
+        score: "8.3",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 23m",
         genre: "Drama",
-        description:
-            "Old friends reunite to help a young man rediscover the meaning of failure."
+        cast: ["Sushant Singh Rajput", "Shraddha Kapoor", "Varun Sharma", "Prateik Babbar"],
+        director: "Nitesh Tiwari",
+        description: "A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled losers.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
     },
 
     {
@@ -1180,261 +1644,287 @@ const movies = [
         trailer: "GGzSId0_qJc",
         year: "2007",
         rating: "7+",
+        score: "8.3",
+        quality: "HD",
         seasons: "Movie",
+        duration: "2h 45m",
         genre: "Drama",
-        description:
-            "A teacher discovers the hidden talent of a misunderstood child."
+        cast: ["Aamir Khan", "Darsheel Safary", "Tisca Chopra", "Vipin Sharma"],
+        director: "Aamir Khan",
+        description: "An 8-year-old boy is thought to be a lazy trouble-maker, until the new art teacher has the patience and compassion to discover the real problem behind his struggles in school.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
     },
 
- // =========================================================
-// BOLLYWOOD HIT MOVIES
-// VERIFIED / KNOWN YOUTUBE TRAILER IDS
-// =========================================================
+    {
+        id: 101,
+        title: "Om Shanti Om",
+        trailer: "9oeGoQGt7Ao",
+        year: "2007",
+        rating: "13+",
+        score: "8.0",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 49m",
+        genre: "Romance",
+        cast: ["Shah Rukh Khan", "Deepika Padukone", "Arjun Rampal", "Kirron Kher"],
+        director: "Farah Khan",
+        description: "In the 1970s, Om, a junior artist, is murdered while attempting to save his love Shanti. Reincarnated in the 2000s, he seeks revenge and redemption.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
+    },
 
-{
-    id: 101,
-    title: "Om Shanti Om",
-    trailer: "9oeGoQGt7Ao",
-    year: "2007",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Romance",
-    description:
-        "A reincarnated film star returns to uncover the truth behind his past and reunite with the love of his life."
-},
+    {
+        id: 102,
+        title: "Dhoom 3",
+        trailer: "yeF_b8EQcK0",
+        year: "2013",
+        rating: "13+",
+        score: "5.4",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 52m",
+        genre: "Action",
+        cast: ["Aamir Khan", "Katrina Kaif", "Abhishek Bachchan", "Uday Chopra"],
+        director: "Vijay Krishna Acharya",
+        description: "When Sahir, a circus entertainer trained in magic and acrobatics, turns into a thief to take down a corrupt bank in Chicago, two Indian cops are called in.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
+    },
 
-{
-    id: 102,
-    title: "Dhoom 3",
-    trailer: "yeF_b8EQcK0",
-    year: "2013",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Action",
-    description:
-        "A mysterious circus performer uses his extraordinary skills to take revenge on a powerful bank."
-},
+    {
+        id: 104,
+        title: "Sultan",
+        trailer: "wPxqcq6Byq0",
+        year: "2016",
+        rating: "13+",
+        score: "7.0",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 50m",
+        genre: "Drama",
+        cast: ["Salman Khan", "Anushka Sharma", "Randeep Hooda", "Amit Sadh"],
+        director: "Ali Abbas Zafar",
+        description: "Sultan is a classic underdog story about a wrestler's journey, looking for a comeback by defeating all odds staked against him.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
+    },
 
-{
-    id: 103,
-    title: "Dangal",
-    trailer: "x_7YlGv9u1g",
-    year: "2016",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Drama",
-    description:
-        "A former wrestler trains his daughters to become world-class wrestlers."
-},
+    {
+        id: 105,
+        title: "Tiger Zinda Hai",
+        trailer: "ePO5M5DE01I",
+        year: "2017",
+        rating: "16+",
+        score: "5.9",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 41m",
+        genre: "Action",
+        cast: ["Salman Khan", "Katrina Kaif", "Sajjad Delafrooz", "Paresh Rawal"],
+        director: "Ali Abbas Zafar",
+        description: "Inspired by real events, Tiger Zinda Hai is a sequel to the blockbuster Ek Tha Tiger, following two secret agents on a daring rescue mission.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
+    },
 
-{
-    id: 104,
-    title: "Sultan",
-    trailer: "wPxqcq6Byq0",
-    year: "2016",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Drama",
-    description:
-        "A former wrestling champion struggles to return to the sport and rebuild his life."
-},
+    {
+        id: 106,
+        title: "Raees",
+        trailer: "J7_1MU3gDk0",
+        year: "2017",
+        rating: "16+",
+        score: "6.8",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 23m",
+        genre: "Crime",
+        cast: ["Shah Rukh Khan", "Nawazuddin Siddiqui", "Mahira Khan", "Mohammed Zeeshan Ayyub"],
+        director: "Rahul Dholakia",
+        description: "A bootlegger sets out to improve his community as a promising leader but encounters a tough, unyielding cop who threatens to dismantle his empire.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
+    },
 
-{
-    id: 105,
-    title: "Tiger Zinda Hai",
-    trailer: "ePO5M5DE01I",
-    year: "2017",
-    rating: "16+",
-    seasons: "Movie",
-    genre: "Action",
-    description:
-        "An Indian spy returns to rescue hostages held by a dangerous terrorist organization."
-},
+    {
+        id: 107,
+        title: "Chennai Express",
+        trailer: "hZGR5Sj1Bfo",
+        year: "2013",
+        rating: "13+",
+        score: "6.1",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 21m",
+        genre: "Comedy",
+        cast: ["Shah Rukh Khan", "Deepika Padukone", "Sathyaraj", "Nikitin Dheer"],
+        director: "Rohit Shetty",
+        description: "A man heading towards Rameshwaram to immerse his late grandfather's ashes accidentally boards a train that leads him straight into South Indian mob territory.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
+    },
 
-{
-    id: 106,
-    title: "Raees",
-    trailer: "J7_1MU3gDk0",
-    year: "2017",
-    rating: "16+",
-    seasons: "Movie",
-    genre: "Crime",
-    description:
-        "A powerful businessman rises through the criminal world while facing a determined police officer."
-},
+    {
+        id: 108,
+        title: "Barfi!",
+        trailer: "rVpPO9xuwVY",
+        year: "2012",
+        rating: "13+",
+        score: "8.1",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 31m",
+        genre: "Romance",
+        cast: ["Ranbir Kapoor", "Priyanka Chopra", "Ileana D'Cruz", "Saurabh Shukla"],
+        director: "Anurag Basu",
+        description: "Set in the 1970s in a charming corner of India, Barfi! is the story of three young people who learn that love can neither be defined nor contained by society's norms.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
+    },
 
-{
-    id: 107,
-    title: "Chennai Express",
-    trailer: "hZGR5Sj1Bfo",
-    year: "2013",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Comedy",
-    description:
-        "A man's journey to immerse his grandfather's ashes becomes an unexpected romantic adventure."
-},
+    {
+        id: 109,
+        title: "Yeh Jawaani Hai Deewani",
+        trailer: "aG5oOFAO9yc",
+        year: "2013",
+        rating: "13+",
+        score: "7.2",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 40m",
+        genre: "Romance",
+        cast: ["Ranbir Kapoor", "Deepika Padukone", "Aditya Roy Kapur", "Kalki Koechlin"],
+        director: "Ayan Mukerji",
+        description: "Kabir and Naina bond during a trekking trip. Before Naina can express her feelings, Kabir leaves to pursue his career. Years later, they meet again at a friend's wedding.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
+    },
 
-{
-    id: 108,
-    title: "Barfi!",
-    trailer: "rVpPO9xuwVY",
-    year: "2012",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Romance",
-    description:
-        "A charming young man and two women experience an unconventional story of love and friendship."
-},
+    {
+        id: 113,
+        title: "Bajrangi Bhaijaan",
+        trailer: "74z6rvKLPP0",
+        year: "2015",
+        rating: "13+",
+        score: "8.1",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 39m",
+        genre: "Drama",
+        cast: ["Salman Khan", "Harshaali Malhotra", "Nawazuddin Siddiqui", "Kareena Kapoor"],
+        director: "Kabir Khan",
+        description: "An Indian man with a magnanimous heart takes a young mute Pakistani girl back to her homeland to reunite her with her family.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
+    },
 
-{
-    id: 109,
-    title: "Yeh Jawaani Hai Deewani",
-    trailer: "aG5oOFAO9yc",
-    year: "2013",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Romance",
-    description:
-        "Four friends reunite and discover how their dreams, relationships and lives have changed."
-},
+    {
+        id: 114,
+        title: "Kick",
+        trailer: "u-j1nx_HY5o",
+        year: "2014",
+        rating: "13+",
+        score: "5.4",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 26m",
+        genre: "Action",
+        cast: ["Salman Khan", "Jacqueline Fernandez", "Nawazuddin Siddiqui", "Randeep Hooda"],
+        director: "Sajid Nadiadwala",
+        description: "An adrenaline junkie breaks up with his girlfriend and embarks on a daring life of crime as a masked thief, pursued by a cop.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
+    },
 
-{
-    id: 110,
-    title: "Zindagi Na Milegi Dobara",
-    trailer: "FJrpcDgC3zU",
-    year: "2011",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Drama",
-    description:
-        "Three friends take a road trip across Spain that changes their lives forever."
-},
+    {
+        id: 119,
+        title: "Krrish",
+        trailer: "yj4bnTrqwvA",
+        year: "2006",
+        rating: "13+",
+        score: "6.4",
+        quality: "HD",
+        seasons: "Movie",
+        duration: "2h 55m",
+        genre: "Action",
+        cast: ["Hrithik Roshan", "Priyanka Chopra", "Rekha", "Naseeruddin Shah"],
+        director: "Rakesh Roshan",
+        description: "Krishna is born with magical powers - a legacy inherited from his father. He must conceal his abilities until he falls in love with Priya and travels to Singapore.",
+        isNetflixOriginal: false,
+        isTrending: false,
+        isTop10: false
+    },
 
-{
-    id: 111,
-    title: "3 Idiots",
-    trailer: "0mYNaU7vYd0",
-    year: "2009",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Comedy",
-    description:
-        "Three engineering students challenge the pressure and expectations of the education system."
-},
-
-{
-    id: 112,
-    title: "PK",
-    trailer: "Hq7Xk9mGKpo",
-    year: "2014",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Comedy",
-    description:
-        "An unusual visitor questions society's beliefs while searching for a way home."
-},
-
-{
-    id: 113,
-    title: "Bajrangi Bhaijaan",
-    trailer: "74z6rvKLPP0",
-    year: "2015",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Drama",
-    description:
-        "A kind-hearted man helps a lost Pakistani girl return safely to her family."
-},
-
-{
-    id: 114,
-    title: "Kick",
-    trailer: "u-j1nx_HY5o",
-    year: "2014",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Action",
-    description:
-        "A mysterious thrill-seeker becomes involved in a dangerous game of crime and justice."
-},
-
-{
-    id: 115,
-    title: "Golmaal Again",
-    trailer: "0v4Hbf0nl6E",
-    year: "2017",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Comedy",
-    description:
-        "A group of friends returns to an old house and encounters an unexpected supernatural presence."
-},
-
-{
-    id: 116,
-    title: "Total Dhamaal",
-    trailer: "XAIKw1zOtG4",
-    year: "2019",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Comedy",
-    description:
-        "A group of eccentric characters race against each other to find a hidden treasure."
-},
-
- 
-
-{
-    id: 119,
-    title: "Krrish",
-    trailer: "yj4bnTrqwvA",
-    year: "2006",
-    rating: "13+",
-    seasons: "Movie",
-    genre: "Action",
-    description:
-        "A young man with extraordinary abilities discovers his destiny as a superhero."
-},
-
-{
-    id: 120,
-    title: "Shaitaan",
-    trailer: "A_HQdwRDRrw",
-    year: "2024",
-    rating: "16+",
-    seasons: "Movie",
-    genre: "Horror",
-    description:
-        "A family finds itself trapped in a terrifying supernatural battle against an evil force."
-}
-
+    {
+        id: 120,
+        title: "Shaitaan",
+        trailer: "A_HQdwRDRrw",
+        year: "2024",
+        rating: "16+",
+        score: "6.7",
+        quality: "4K Ultra HD",
+        seasons: "Movie",
+        duration: "2h 12m",
+        genre: "Horror",
+        cast: ["Ajay Devgn", "R. Madhavan", "Jyotika", "Janki Bodiwala"],
+        director: "Vikas Bahl",
+        description: "A family's weekend retreat turns into a living nightmare when a mysterious stranger enters their home and hypnotizes their young daughter.",
+        isNetflixOriginal: false,
+        isTrending: true,
+        isTop10: false
+    }
 
 ];
 
-
 // =========================================================
-// GENERATE MOVIE POSTERS FROM YOUTUBE TRAILERS
+// GENERATE POSTERS AND BACKDROPS FROM YOUTUBE TRAILERS
 // =========================================================
 
 movies.forEach(movie => {
-
-    movie.image =
-        `https://img.youtube.com/vi/${movie.trailer}/hqdefault.jpg`;
-
+    // Primary thumbnail image
+    movie.image = `https://img.youtube.com/vi/${movie.trailer}/hqdefault.jpg`;
+    // High-resolution backdrop image
+    movie.backdrop = `https://img.youtube.com/vi/${movie.trailer}/maxresdefault.jpg`;
 });
 
+// =========================================================
+// HELPER UTILITIES
+// =========================================================
 
-// =========================================================
-// EXPORT MOVIES
-// =========================================================
-//
-// If browse.js is loaded as a normal script,
-// the global `movies` variable is available.
-//
-// If you later convert movies.js to a module,
-// use:
-//
-// export { movies };
-//
-// =========================================================
+function getMovieById(id) {
+    const numId = Number(id);
+    return movies.find(m => m.id === numId) || null;
+}
+
+function getMoviesByGenre(genreName) {
+    if (!genreName || genreName === "All") return movies;
+    return movies.filter(m => m.genre && m.genre.toLowerCase() === genreName.toLowerCase());
+}
+
+function getTop10Movies() {
+    return movies.filter(m => m.isTop10).sort((a, b) => (a.top10Rank || 99) - (b.top10Rank || 99));
+}
+
+function getTrendingMovies() {
+    return movies.filter(m => m.isTrending);
+}
+
+// Make accessible to non-module scripts if needed
+if (typeof window !== 'undefined') {
+    window.movies = movies;
+    window.getMovieById = getMovieById;
+    window.getMoviesByGenre = getMoviesByGenre;
+    window.getTop10Movies = getTop10Movies;
+    window.getTrendingMovies = getTrendingMovies;
+}

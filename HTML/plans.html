@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Plan - Netflix</title>
+
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/plans.css">
+</head>
+
+<body>
+
+    <header class="plans-header">
+        <a href="browse.html" class="netflix-logo" aria-label="Netflix Home">NETFLIX</a>
+        <a href="browse.html" class="browse-link">Back to Home</a>
+    </header>
+
+    <main class="plans-container">
+
+        <div class="plans-header-text">
+            <span>STEP 1 OF 2</span>
+            <h1>Choose the plan that's right for you</h1>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> Watch all you want. Ad-free.</li>
+                <li><i class="fa-solid fa-check"></i> Recommendations made just for you.</li>
+                <li><i class="fa-solid fa-check"></i> Change or cancel your plan anytime.</li>
+            </ul>
+        </div>
+
+        <!-- PLAN CARDS GRID -->
+        <div class="plan-cards-grid">
+
+            <!-- MOBILE PLAN -->
+            <div class="plan-card" data-plan="Mobile" data-price="₹149/month" data-quality="Good" data-res="480p">
+                <div class="plan-card-header">
+                    <h3>Mobile</h3>
+                    <p class="plan-price">₹149<small>/mo</small></p>
+                </div>
+                <div class="plan-card-body">
+                    <p><strong>Quality:</strong> Good</p>
+                    <p><strong>Resolution:</strong> 480p (SD)</p>
+                    <p><strong>Devices:</strong> Phone, Tablet</p>
+                </div>
+            </div>
+
+            <!-- BASIC PLAN -->
+            <div class="plan-card" data-plan="Basic" data-price="₹199/month" data-quality="Good" data-res="720p">
+                <div class="plan-card-header">
+                    <h3>Basic</h3>
+                    <p class="plan-price">₹199<small>/mo</small></p>
+                </div>
+                <div class="plan-card-body">
+                    <p><strong>Quality:</strong> Good</p>
+                    <p><strong>Resolution:</strong> 720p (HD)</p>
+                    <p><strong>Devices:</strong> TV, Computer, Phone, Tablet</p>
+                </div>
+            </div>
+
+            <!-- STANDARD PLAN -->
+            <div class="plan-card" data-plan="Standard" data-price="₹499/month" data-quality="Great" data-res="1080p">
+                <div class="plan-card-header">
+                    <h3>Standard</h3>
+                    <p class="plan-price">₹499<small>/mo</small></p>
+                </div>
+                <div class="plan-card-body">
+                    <p><strong>Quality:</strong> Great</p>
+                    <p><strong>Resolution:</strong> 1080p (Full HD)</p>
+                    <p><strong>Devices:</strong> TV, Computer, Phone, Tablet</p>
+                </div>
+            </div>
+
+            <!-- PREMIUM PLAN (RECOMMENDED) -->
+            <div class="plan-card active recommended" data-plan="Premium" data-price="₹649/month" data-quality="Best" data-res="4K + HDR">
+                <span class="recommended-badge">POPULAR</span>
+                <div class="plan-card-header">
+                    <h3>Premium</h3>
+                    <p class="plan-price">₹649<small>/mo</small></p>
+                </div>
+                <div class="plan-card-body">
+                    <p><strong>Quality:</strong> Best</p>
+                    <p><strong>Resolution:</strong> 4K + HDR</p>
+                    <p><strong>Devices:</strong> TV, Computer, Phone, Tablet (4 screens)</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTINUATION CTA -->
+        <div class="plans-footer-action">
+            <button id="continue-payment-btn" class="btn-continue-plan">
+                Next: Payment <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <p class="small-disclaimer">HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to internet service and device capabilities.</p>
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="../javascript/plans.js"></script>
+
+</body>
+
+</html>

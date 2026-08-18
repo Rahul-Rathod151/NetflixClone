@@ -4,214 +4,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Account - Netflix</title>
 
-    <title>Profile - Netflix</title>
-     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    >
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <link rel="stylesheet" href="/css/profile.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/profile.css">
 </head>
 
 <body>
 
     <!-- ================= HEADER ================= -->
-
     <header class="profile-header">
-
-        <a href="browse.html" class="netflix-logo">
+        <a href="browse.html" class="netflix-logo" aria-label="Netflix Home">
             NETFLIX
         </a>
 
         <a href="browse.html" class="browse-link">
             <i class="fa-solid fa-arrow-left"></i>
-            Browse
+            <span>Browse</span>
         </a>
-
     </header>
 
-
-    <!-- ================= PROFILE ================= -->
-
+    <!-- ================= PROFILE MAIN ================= -->
     <main class="profile-page">
 
         <section class="profile-card">
 
+            <!-- Profile Header Banner -->
             <div class="profile-top">
-
-                <div class="profile-avatar">
-                    <i class="fa-solid fa-user"></i>
+                <div class="profile-avatar-container">
+                    <img id="profile-avatar-img" src="../assets/images/avatar1.jpg" alt="Profile Avatar" class="profile-avatar-img" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png'">
+                    <button class="avatar-change-btn" id="change-avatar-btn" title="Change Avatar">
+                        <i class="fa-solid fa-camera"></i>
+                    </button>
                 </div>
 
                 <div class="profile-basic">
-
-                    <h1 id="profile-name">
-                        Rahul
-                    </h1>
-
-                    <p id="profile-email">
-                        user@example.com
-                    </p>
-
+                    <div class="profile-title-row">
+                        <h1 id="profile-name">Rahul</h1>
+                        <span class="plan-tag" id="profile-plan-tag">PREMIUM</span>
+                    </div>
+                    <p id="profile-email">user@example.com</p>
+                    <p style="font-size:0.8rem; color:#808080; margin-top:4px;">Member since August 2026</p>
                 </div>
 
+                <div class="header-actions-right">
+                    <button id="edit-profile" class="btn-edit-profile">
+                        <i class="fa-solid fa-pen"></i> Edit Profile
+                    </button>
+                </div>
             </div>
 
+            <!-- Avatar Picker Selector Modal / Container -->
+            <div class="avatar-picker" id="avatar-picker" style="display: none;">
+                <h4>Choose an Avatar</h4>
+                <div class="avatar-grid">
+                    <img src="../assets/images/avatar1.jpg" class="avatar-option" data-avatar="../assets/images/avatar1.jpg" alt="Avatar 1">
+                    <img src="../assets/images/avatar2.jpg" class="avatar-option" data-avatar="../assets/images/avatar2.jpg" alt="Avatar 2">
+                    <img src="../assets/images/avatar3.jpg" class="avatar-option" data-avatar="../assets/images/avatar3.jpg" alt="Avatar 3">
+                    <img src="../assets/images/avatar4.jpg" class="avatar-option" data-avatar="../assets/images/avatar4.jpg" alt="Avatar 4">
+                </div>
+            </div>
 
-            <!-- ================= ACCOUNT ================= -->
-
+            <!-- ================= MEMBERSHIP & BILLING ================= -->
             <div class="profile-section">
+                <h2>Membership & Plans</h2>
 
-                <h2>Account</h2>
-
-                <div class="profile-row">
-
+                <div class="profile-row membership-row">
                     <div>
-                        <i class="fa-solid fa-user"></i>
-
+                        <i class="fa-solid fa-credit-card"></i>
                         <div>
-                            <strong>Profile</strong>
-                            <p>Manage your profile</p>
+                            <strong id="membership-title">Netflix Premium (4K + HDR)</strong>
+                            <p id="membership-billing">Active • Next billing date: Sept 18, 2026</p>
                         </div>
                     </div>
-
-                    <button id="edit-profile">
-                        Edit
-                    </button>
-
+                    <a href="plans.html" class="btn-secondary-link">
+                        Change Plan
+                    </a>
                 </div>
+            </div>
 
+            <!-- ================= ACCOUNT & PROFILES ================= -->
+            <div class="profile-section">
+                <h2>Account Settings</h2>
 
                 <div class="profile-row">
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+                        <div>
+                            <strong>Switch Profile</strong>
+                            <p>Manage all viewing profiles</p>
+                        </div>
+                    </div>
+                    <a href="manage-profiles.html" class="btn-secondary-link">
+                        Manage
+                    </a>
+                </div>
 
+                <div class="profile-row">
                     <div>
                         <i class="fa-solid fa-list"></i>
-
                         <div>
                             <strong>My List</strong>
-                            <p id="my-list-count">
-                                Your saved movies
-                            </p>
+                            <p id="my-list-count">Your saved movies</p>
                         </div>
                     </div>
-
-                    <a href="my-list.html">
-                        Open
+                    <a href="my-list.html" class="btn-secondary-link">
+                        Open List
                     </a>
-
                 </div>
 
+                <div class="profile-row">
+                    <div>
+                        <i class="fa-solid fa-gear"></i>
+                        <div>
+                            <strong>App Settings</strong>
+                            <p>Playback, Video Quality, Privacy</p>
+                        </div>
+                    </div>
+                    <a href="settings.html" class="btn-secondary-link">
+                        Settings
+                    </a>
+                </div>
             </div>
-
 
             <!-- ================= PREFERENCES ================= -->
-
             <div class="profile-section">
-
                 <h2>Preferences</h2>
 
-
                 <div class="profile-row">
-
                     <div>
-
                         <i class="fa-solid fa-language"></i>
-
                         <div>
-
                             <strong>Language</strong>
-
-                            <p>
-                                Choose your preferred language
-                            </p>
-
+                            <p>Choose your preferred interface language</p>
                         </div>
-
                     </div>
-
-
-                    <select id="language-select">
-
-                        <option value="en">
-                            English
-                        </option>
-
-                        <option value="hi">
-                            हिन्दी
-                        </option>
-
-                        <option value="mr">
-                            मराठी
-                        </option>
-
+                    <select id="language-select" class="profile-select">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="mr">मराठी</option>
                     </select>
-
                 </div>
-
 
                 <div class="profile-row">
-
                     <div>
-
                         <i class="fa-solid fa-play"></i>
-
                         <div>
-
-                            <strong>
-                                Autoplay
-                            </strong>
-
-                            <p>
-                                Automatically play previews
-                            </p>
-
+                            <strong>Autoplay Previews</strong>
+                            <p>Automatically play video previews while browsing</p>
                         </div>
-
                     </div>
-
-
                     <label class="switch">
-
-                        <input
-                            type="checkbox"
-                            id="autoplay-toggle"
-                            checked
-                        >
-
-                        <span></span>
-
+                        <input type="checkbox" id="autoplay-toggle" checked>
+                        <span class="slider round"></span>
                     </label>
-
                 </div>
-
             </div>
 
-
             <!-- ================= ACTIONS ================= -->
-
             <div class="profile-actions">
-
-                <button
-                    class="logout-button"
-                    id="logout-button"
-                >
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    Sign Out
+                <button class="logout-button" id="logout-button">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sign Out
                 </button>
-
             </div>
 
         </section>
 
     </main>
 
-
-    <script src="/javascript/profile.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="../javascript/profile.js"></script>
 
 </body>
 

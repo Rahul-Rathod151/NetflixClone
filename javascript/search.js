@@ -1,303 +1,218 @@
 /* =========================================================
-   NETFLIX SEARCH
+   NETFLIX SEARCH - JAVASCRIPT
    ========================================================= */
 
+const searchInput = document.getElementById("search-input");
+const searchResults = document.getElementById("search-results");
+const searchTitle = document.getElementById("search-title");
+const resultCount = document.getElementById("result-count");
+const clearButton = document.getElementById("clear-search");
+const emptyState = document.getElementById("empty-state");
+const noResults = document.getElementById("no-results");
+const filterTags = document.querySelectorAll(".search-filter-tag");
+const historySection = document.getElementById("search-history-section");
+const historyChips = document.getElementById("history-chips");
+const clearHistoryBtn = document.getElementById("clear-history-btn");
 
-/* =========================================================
-   ELEMENTS
-   ========================================================= */
-
-const searchInput =
-    document.getElementById(
-        "search-input"
-    );
-
-const searchResults =
-    document.getElementById(
-        "search-results"
-    );
-
-const searchTitle =
-    document.getElementById(
-        "search-title"
-    );
-
-const resultCount =
-    document.getElementById(
-        "result-count"
-    );
-
-const clearButton =
-    document.getElementById(
-        "clear-search"
-    );
-
-const emptyState =
-    document.getElementById(
-        "empty-state"
-    );
-
-const noResults =
-    document.getElementById(
-        "no-results"
-    );
-
-
-/* =========================================================
-   CREATE SEARCH CARD
-   ========================================================= */
+let currentGenreFilter = "All";
 
 function createSearchCard(movie) {
-
-    const card =
-        document.createElement("article");
-
-    card.className =
-        "search-card";
-
+    const card = document.createElement("article");
+    card.className = "search-card";
 
     card.innerHTML = `
-
-        <img
-            src="${movie.image}"
-            alt="${movie.title}"
-            loading="lazy"
-        >
-
-        <div class="search-card-overlay">
-
-            <h3 class="search-card-title">
-                ${movie.title}
-            </h3>
-
-            <div class="search-card-info">
-
-                <span>
-                    ${movie.year}
-                </span>
-
-                <span>
-                    ${movie.rating}
-                </span>
-
-                <span>
-                    ${movie.genre}
-                </span>
-
-            </div>
-
+        <div class="card-media">
+            <img src="${movie.image}" alt="${movie.title}" loading="lazy">
+            <button class="play-overlay" aria-label="Play ${movie.title}">
+                <i class="fa-solid fa-play"></i>
+            </button>
         </div>
-
+        <div class="search-card-overlay">
+            <h3 class="search-card-title">${movie.title}</h3>
+            <div class="search-card-info">
+                <span style="color:#46d369; font-weight:700;">${movie.score || '8.5'}</span>
+                <span>${movie.year}</span>
+                <span>${movie.rating}</span>
+                <span>${movie.genre}</span>
+            </div>
+        </div>
     `;
 
-
-    /* ================= CLICK ================= */
-
-    card.addEventListener(
-        "click",
-        () => {
-
-            window.location.href =
-                `movie-details.html?id=${movie.id}`;
-
-        }
-    );
-
+    card.addEventListener("click", () => {
+        saveSearchHistory(movie.title);
+        window.location.href = `movie-details.html?id=${movie.id}`;
+    });
 
     return card;
 }
 
+function saveSearchHistory(query) {
+    if (!query || query.trim().length < 2) return;
+    let history = JSON.parse(localStorage.getItem("netflixSearchHistory")) || [];
+    const trimmed = query.trim();
 
-/* =========================================================
-   SEARCH MOVIES
-   ========================================================= */
+    history = history.filter(item => item.toLowerCase() !== trimmed.toLowerCase());
+    history.unshift(trimmed);
+    if (history.length > 6) history = history.slice(0, 6);
 
-function searchMovies(query) {
-
-    const value =
-        query
-            .trim()
-            .toLowerCase();
-
-
-    /* ================= EMPTY ================= */
-
-    if (!value) {
-
-        searchResults.innerHTML = "";
-
-        searchTitle.textContent =
-            "Explore Movies & Shows";
-
-        resultCount.textContent = "";
-
-        emptyState.style.display =
-            "flex";
-
-        noResults.style.display =
-            "none";
-
-        clearButton.style.display =
-            "none";
-
-        return;
-
-    }
-
-
-    /* ================= SEARCH ================= */
-
-    const results =
-        movies.filter((movie) => {
-
-            return (
-                movie.title
-                    .toLowerCase()
-                    .includes(value)
-
-                ||
-
-                movie.genre
-                    .toLowerCase()
-                    .includes(value)
-
-                ||
-
-                movie.description
-                    .toLowerCase()
-                    .includes(value)
-            );
-
-        });
-
-
-    /* ================= UPDATE UI ================= */
-
-    searchResults.innerHTML = "";
-
-    emptyState.style.display =
-        "none";
-
-    clearButton.style.display =
-        "block";
-
-
-    searchTitle.textContent =
-        `Search results for "${query}"`;
-
-
-    resultCount.textContent =
-        `${results.length} result${results.length !== 1 ? "s" : ""}`;
-
-
-    /* ================= NO RESULTS ================= */
-
-    if (results.length === 0) {
-
-        noResults.style.display =
-            "flex";
-
-        return;
-
-    }
-
-
-    noResults.style.display =
-        "none";
-
-
-    /* ================= RENDER ================= */
-
-    results.forEach((movie) => {
-
-        const card =
-            createSearchCard(movie);
-
-        searchResults.appendChild(card);
-
-    });
-
+    localStorage.setItem("netflixSearchHistory", JSON.stringify(history));
+    renderSearchHistory();
 }
 
+function renderSearchHistory() {
+    if (!historySection || !historyChips) return;
+    const history = JSON.parse(localStorage.getItem("netflixSearchHistory")) || [];
 
-/* =========================================================
-   LIVE SEARCH
-   ========================================================= */
+    if (history.length === 0) {
+        historySection.style.display = "none";
+        return;
+    }
 
-searchInput.addEventListener(
-    "input",
-    () => {
+    historySection.style.display = "block";
+    historyChips.innerHTML = "";
 
-        searchMovies(
-            searchInput.value
+    history.forEach(item => {
+        const chip = document.createElement("span");
+        chip.className = "history-chip";
+        chip.textContent = item;
+        chip.addEventListener("click", () => {
+            if (searchInput) {
+                searchInput.value = item;
+                searchMovies(item);
+            }
+        });
+        historyChips.appendChild(chip);
+    });
+}
+
+if (clearHistoryBtn) {
+    clearHistoryBtn.addEventListener("click", () => {
+        localStorage.removeItem("netflixSearchHistory");
+        renderSearchHistory();
+    });
+}
+
+function searchMovies(query) {
+    const value = query.trim().toLowerCase();
+    if (!window.movies) return;
+
+    if (clearButton) {
+        clearButton.style.display = value ? "block" : "none";
+    }
+
+    if (!value && currentGenreFilter === "All") {
+        if (searchResults) searchResults.innerHTML = "";
+        if (searchTitle) searchTitle.textContent = "Explore Movies & TV Shows";
+        if (resultCount) resultCount.textContent = "";
+        if (emptyState) emptyState.style.display = "flex";
+        if (noResults) noResults.style.display = "none";
+        renderSearchHistory();
+        return;
+    }
+
+    if (historySection) historySection.style.display = "none";
+
+    const results = window.movies.filter((movie) => {
+        const matchesQuery = !value || (
+            movie.title.toLowerCase().includes(value) ||
+            (movie.genre && movie.genre.toLowerCase().includes(value)) ||
+            (movie.description && movie.description.toLowerCase().includes(value)) ||
+            (movie.cast && Array.isArray(movie.cast) && movie.cast.some(c => c.toLowerCase().includes(value)))
         );
 
+        const matchesGenre = currentGenreFilter === "All" ||
+            (movie.genre && movie.genre.toLowerCase() === currentGenreFilter.toLowerCase());
+
+        return matchesQuery && matchesGenre;
+    });
+
+    if (searchResults) searchResults.innerHTML = "";
+    if (emptyState) emptyState.style.display = "none";
+
+    if (searchTitle) {
+        searchTitle.textContent = value
+            ? `Search results for "${query}"`
+            : `${currentGenreFilter} Titles`;
     }
-);
 
-
-/* =========================================================
-   CLEAR SEARCH
-   ========================================================= */
-
-clearButton.addEventListener(
-    "click",
-    () => {
-
-        searchInput.value = "";
-
-        searchInput.focus();
-
-        searchMovies("");
-
+    if (resultCount) {
+        resultCount.textContent = `${results.length} result${results.length !== 1 ? "s" : ""}`;
     }
-);
 
+    if (results.length === 0) {
+        if (noResults) noResults.style.display = "flex";
+        return;
+    }
 
-/* =========================================================
-   KEYBOARD SHORTCUT
-   ========================================================= */
+    if (noResults) noResults.style.display = "none";
 
-document.addEventListener(
-    "keydown",
-    (event) => {
+    results.forEach((movie) => {
+        const card = createSearchCard(movie);
+        searchResults.appendChild(card);
+    });
+}
 
-        /*
-           Press "/" to focus search
-        */
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        searchMovies(searchInput.value);
+    });
 
-        if (
-            event.key === "/" &&
-            document.activeElement !== searchInput
-        ) {
-
-            event.preventDefault();
-
-            searchInput.focus();
-
+    searchInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter" && searchInput.value.trim()) {
+            saveSearchHistory(searchInput.value.trim());
         }
+    });
+}
 
-
-        /*
-           Press Escape to clear
-        */
-
-        if (
-            event.key === "Escape"
-        ) {
-
+if (clearButton) {
+    clearButton.addEventListener("click", () => {
+        if (searchInput) {
             searchInput.value = "";
-
-            searchMovies("");
-
+            searchInput.focus();
         }
+        searchMovies("");
+    });
+}
 
+filterTags.forEach(tag => {
+    tag.addEventListener("click", () => {
+        filterTags.forEach(t => t.classList.remove("active"));
+        tag.classList.add("active");
+        currentGenreFilter = tag.dataset.genre || "All";
+        searchMovies(searchInput ? searchInput.value : "");
+    });
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "/" && document.activeElement !== searchInput) {
+        event.preventDefault();
+        if (searchInput) searchInput.focus();
     }
-);
+    if (event.key === "Escape" && searchInput) {
+        searchInput.value = "";
+        searchMovies("");
+    }
+});
 
+// Check URL Params for search filters
+document.addEventListener("DOMContentLoaded", () => {
+    renderSearchHistory();
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get("filter");
+    const queryParam = urlParams.get("query");
 
-/* =========================================================
-   INITIAL LOAD
-   ========================================================= */
+    if (filterParam) {
+        currentGenreFilter = filterParam;
+        const matchingTag = Array.from(filterTags).find(t => t.dataset.genre.toLowerCase() === filterParam.toLowerCase());
+        if (matchingTag) {
+            filterTags.forEach(t => t.classList.remove("active"));
+            matchingTag.classList.add("active");
+        }
+    }
 
-searchMovies("");
+    if (queryParam && searchInput) {
+        searchInput.value = queryParam;
+    }
+
+    searchMovies(searchInput ? searchInput.value : "");
+});

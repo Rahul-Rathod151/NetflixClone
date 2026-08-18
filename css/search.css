@@ -1,14 +1,15 @@
 /* =========================================================
-   SEARCH PAGE
+   NETFLIX SEARCH PAGE - STYLING
    ========================================================= */
 
 :root {
-    --red: #e50914;
-    --black: #000;
-    --white: #fff;
-    --gray: #b3b3b3;
+    --netflix-red: #E50914;
+    --black: #141414;
+    --deep-black: #000000;
+    --white: #FFFFFF;
+    --text-gray: #B3B3B3;
+    --dark-gray: #181818;
 }
-
 
 * {
     margin: 0;
@@ -16,453 +17,312 @@
     box-sizing: border-box;
 }
 
-
-html {
-    scroll-behavior: smooth;
-}
-
-
 body {
     min-width: 320px;
-
-    background: #000;
-
-    color: #fff;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
 }
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
 
 .search-header {
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     height: 70px;
-
     padding: 0 4%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
-    z-index: 100;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, .95),
-            transparent
-        );
+    z-index: 1000;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
 }
-
-
-/* =========================================================
-   LOGO
-   ========================================================= */
 
 .netflix-logo {
-    color: var(--red);
-
-    text-decoration: none;
-
-    font-size: 2rem;
-
+    color: var(--netflix-red);
+    font-size: 1.85rem;
     font-weight: 900;
-
-    letter-spacing: -2px;
+    letter-spacing: 2px;
+    text-decoration: none;
 }
-
-
-/* =========================================================
-   BACK BUTTON
-   ========================================================= */
 
 .back-button {
-    color: #fff;
-
+    color: var(--white);
     text-decoration: none;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    font-size: 14px;
-
+    font-size: 0.95rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
 }
-
 
 .back-button:hover {
-    color: #ccc;
+    background: rgba(255, 255, 255, 0.3);
 }
-
-
-/* =========================================================
-   MAIN
-   ========================================================= */
 
 .search-page {
-    min-height: 100vh;
-
-    padding:
-        120px 4% 60px;
+    padding: 100px 4% 60px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
-
-
-/* =========================================================
-   SEARCH BOX
-   ========================================================= */
 
 .search-box {
+    position: relative;
     width: 100%;
-
-    max-width: 800px;
-
-    height: 58px;
-
-    margin: 0 auto 50px;
-
-    display: flex;
-
-    align-items: center;
-
-    background: #fff;
-
-    border-radius: 4px;
-
-    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto 24px;
 }
 
-
-.search-box > i {
-    color: #555;
-
-    font-size: 20px;
-
-    padding-left: 20px;
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--text-gray);
 }
 
-
-.search-box input {
-    flex: 1;
-
-    height: 100%;
-
-    border: none;
-
+#search-input {
+    width: 100%;
+    padding: 16px 50px 16px 55px;
+    font-size: 1.1rem;
+    background: var(--dark-gray);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    color: var(--white);
     outline: none;
-
-    padding: 0 18px;
-
-    font-size: 18px;
-
-    color: #111;
-
-    background: transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.search-box input::placeholder {
-    color: #777;
+#search-input:focus {
+    border-color: var(--netflix-red);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
 }
-
 
 #clear-search {
-    width: 55px;
-
-    height: 100%;
-
-    border: none;
-
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
     background: transparent;
-
-    color: #555;
-
+    border: none;
+    color: var(--text-gray);
+    font-size: 1.2rem;
     cursor: pointer;
-
-    font-size: 18px;
-
-    display: none;
+    transition: color 0.2s ease;
 }
-
 
 #clear-search:hover {
-    color: #111;
+    color: var(--white);
 }
 
+/* Filters */
 
-/* =========================================================
-   HEADING
-   ========================================================= */
-
-.search-heading {
-    margin-bottom: 25px;
-}
-
-
-.search-heading h1 {
-    font-size: 26px;
-
-    margin-bottom: 6px;
-}
-
-
-#result-count {
-    color: var(--gray);
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   RESULTS GRID
-   ========================================================= */
-
-.search-results {
-    display: grid;
-
-    grid-template-columns:
-        repeat(6, minmax(0, 1fr));
-
-    gap: 15px;
-}
-
-
-/* =========================================================
-   MOVIE CARD
-   ========================================================= */
-
-.search-card {
-    position: relative;
-
-    aspect-ratio: 2 / 3;
-
-    border-radius: 5px;
-
-    overflow: hidden;
-
-    background: #181818;
-
-    cursor: pointer;
-
-    transition:
-        transform .3s ease;
-}
-
-
-.search-card:hover {
-    transform: scale(1.06);
-
-    z-index: 5;
-}
-
-
-.search-card img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-/* =========================================================
-   CARD OVERLAY
-   ========================================================= */
-
-.search-card-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    padding: 15px;
-
+.search-filters {
     display: flex;
-
-    flex-direction: column;
-
-    justify-content: flex-end;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.95),
-            transparent 65%
-        );
-
-    opacity: 0;
-
-    transition:
-        opacity .25s ease;
-}
-
-
-.search-card:hover
-.search-card-overlay {
-    opacity: 1;
-}
-
-
-.search-card-title {
-    font-size: 16px;
-
-    font-weight: 700;
-
-    margin-bottom: 8px;
-}
-
-
-.search-card-info {
-    display: flex;
-
-    gap: 8px;
-
-    color: #ddd;
-
-    font-size: 11px;
-}
-
-
-.search-card-info span:nth-child(2) {
-    border: 1px solid #aaa;
-
-    padding: 1px 4px;
-}
-
-
-/* =========================================================
-   EMPTY STATES
-   ========================================================= */
-
-.empty-state,
-.no-results {
-    min-height: 300px;
-
-    display: none;
-
     align-items: center;
-
     justify-content: center;
-
-    flex-direction: column;
-
-    text-align: center;
-
-    color: #aaa;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
 }
 
-
-.empty-state i,
-.no-results i {
-    font-size: 50px;
-
-    margin-bottom: 20px;
-
-    color: #555;
+.search-filter-tag {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
 }
 
+.search-filter-tag:hover,
+.search-filter-tag.active {
+    background: var(--netflix-red);
+    border-color: var(--netflix-red);
+}
 
-.empty-state h2,
-.no-results h2 {
-    color: #fff;
+/* History Section */
 
+.search-history-section {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-gray);
     margin-bottom: 10px;
 }
 
+#clear-history-btn {
+    background: transparent;
+    border: none;
+    color: var(--netflix-red);
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.history-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.history-chip {
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.history-chip:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Results */
+
+.search-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-heading h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+#result-count {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.search-card {
+    background: var(--dark-gray);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.card-media {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.card-media img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.search-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.search-card-overlay {
+    padding: 12px;
+}
+
+.search-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 6px;
+}
+
+.search-card-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--text-gray);
+}
+
+/* Empty & No Results States */
+
+.empty-state,
+.no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-state i,
+.no-results i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.empty-state h2,
+.no-results h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
 
 .empty-state p,
 .no-results p {
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 1100px) {
-
-    .search-results {
-        grid-template-columns:
-            repeat(5, minmax(0, 1fr));
-    }
-
-}
-
-
-@media (max-width: 850px) {
-
-    .search-results {
-        grid-template-columns:
-            repeat(4, minmax(0, 1fr));
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .search-header {
-        height: 60px;
-
-        padding: 0 20px;
-    }
-
-
-    .netflix-logo {
-        font-size: 1.7rem;
-    }
-
-
-    .search-page {
-        padding:
-            100px 20px 40px;
-    }
-
-
-    .search-box {
-        height: 50px;
-
-        margin-bottom: 35px;
-    }
-
-
-    .search-box input {
-        font-size: 14px;
-    }
-
-
-    .search-heading h1 {
-        font-size: 21px;
-    }
-
-
-    .search-results {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 10px;
-    }
-
-
-    .search-card-overlay {
-        opacity: 1;
-    }
-
+    color: var(--text-gray);
+    font-size: 0.95rem;
 }

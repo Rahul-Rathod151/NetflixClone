@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Centre - Netflix</title>
+
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/help.css">
+</head>
+
+<body>
+
+    <header class="help-header">
+        <a href="browse.html" class="netflix-logo" aria-label="Netflix Home">NETFLIX</a>
+        <div class="header-right">
+            <a href="login.html" class="btn-help-login">Sign In</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HELP HERO & SEARCH -->
+        <section class="help-hero">
+            <h1>How can we help?</h1>
+            <div class="help-search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="help-search-input" placeholder="Search for help topics, billing, device setup...">
+            </div>
+        </section>
+
+        <div class="help-container">
+
+            <!-- POPULAR TOPICS GRID -->
+            <section class="topics-section">
+                <h2>Popular Topics</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3>Account & Billing</h3>
+                        <p>Update payment methods, view invoices, or change plan pricing.</p>
+                    </div>
+                    <div class="topic-card">
+                        <i class="fa-solid fa-desktop"></i>
+                        <h3>Watching Netflix</h3>
+                        <p>Supported browsers, smart TVs, downloads and video quality controls.</p>
+                    </div>
+                    <div class="topic-card">
+                        <i class="fa-solid fa-wrench"></i>
+                        <h3>Quick Fixes</h3>
+                        <p>Troubleshoot login issues, playback error codes, or blank screens.</p>
+                    </div>
+                    <div class="topic-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Security & Privacy</h3>
+                        <p>Password reset, parental control PINs, and managing active devices.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ ACCORDION SECTION -->
+            <section class="faq-accordion-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list" id="help-faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            <span>How do I change or cancel my Netflix subscription?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>You can change your plan or cancel online anytime by going to Account Settings -> Membership & Plans. There are no cancellation fees or lock-in contracts.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            <span>What should I do if I forgot my password?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Visit the <a href="forgot-password.html" style="color:#e50914;">Forgot Password</a> page, enter your registered email address, and follow the instructions sent to your inbox.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            <span>How do I set up parental controls for Kids profiles?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Go to Manage Profiles, select or create a Kids profile, and set maturity ratings or a 4-digit profile PIN.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-btn">
+                            <span>How many devices can watch at the same time?</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Depending on your plan: Mobile/Basic (1 device), Standard (2 devices), and Premium (4 devices simultaneously).</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SUPPORT CONTACT ACTION -->
+            <section class="contact-support-section">
+                <h2>Need more help?</h2>
+                <div class="support-buttons">
+                    <a href="tel:0008009191743" class="btn-support">
+                        <i class="fa-solid fa-phone"></i> Call 000-800-919-1743
+                    </a>
+                    <button class="btn-support btn-chat" id="live-chat-btn">
+                        <i class="fa-solid fa-comments"></i> Start Live Chat Demo
+                    </button>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="../javascript/help.js"></script>
+
+</body>
+
+</html>

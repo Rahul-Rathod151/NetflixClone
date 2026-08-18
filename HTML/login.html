@@ -4,177 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Sign In - Netflix</title>
-     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Login CSS -->
-    <!-- <link rel="stylesheet" href="/css/login.css"> -->
     <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
 
     <!-- ================= HEADER ================= -->
-
     <header class="login-header">
-
-        <a href="index.html" class="netflix-logo">
+        <a href="../index.html" class="netflix-logo" aria-label="Netflix Home">
             NETFLIX
         </a>
-
     </header>
 
-
     <!-- ================= LOGIN SECTION ================= -->
-
     <main class="login-page">
-
         <div class="login-container">
-
             <div class="login-box">
-
                 <h1>Sign In</h1>
 
-
                 <!-- Login Form -->
-
                 <form id="login-form">
 
                     <!-- Email -->
-
                     <div class="input-group">
-
                         <input type="email" id="email" placeholder=" " autocomplete="email">
-
-                        <label for="email">
-                            Email or mobile number
-                        </label>
-
+                        <label for="email">Email or mobile number</label>
                         <small class="error-message" id="email-error"></small>
-
                     </div>
 
-
                     <!-- Password -->
-
                     <div class="input-group password-group">
-
                         <input type="password" id="password" placeholder=" " autocomplete="current-password">
-
-                        <label for="password">
-                            Password
-                        </label>
-
+                        <label for="password">Password</label>
                         <button type="button" class="password-toggle" id="password-toggle" aria-label="Show password">
                             <i class="fa-solid fa-eye"></i>
                         </button>
-
                         <small class="error-message" id="password-error"></small>
-
                     </div>
 
-
                     <!-- Sign In Button -->
-
                     <button type="submit" class="signin-button" id="signin-button">
                         Sign In
                     </button>
 
-
-                    <!-- OR -->
-
+                    <!-- OR Divider -->
                     <div class="divider">
                         <span>OR</span>
                     </div>
 
-
                     <!-- Google Button -->
-
                     <button type="button" class="google-button" id="google-login">
                         <i class="fa-brands fa-google"></i>
                         Continue with Google
                     </button>
 
-
                     <!-- Forgot Password -->
-
                     <a href="forgot-password.html" class="forgot-password">
                         Forgot password?
                     </a>
 
-
                     <!-- Remember Me -->
-
                     <div class="remember-section">
-
                         <label class="remember-me">
-
                             <input type="checkbox" id="remember-me">
-
                             <span>Remember me</span>
-
                         </label>
-
                     </div>
-
 
                     <!-- Signup -->
-
                     <div class="signup-text">
-
                         <span>New to Netflix?</span>
-
-                        <a href="signup.htm">
-                            Sign up now.
-                        </a>
-
+                        <a href="signup.html">Sign up now.</a>
                     </div>
 
-
                     <!-- Login Message -->
-
                     <div class="login-message" id="login-message"></div>
 
                 </form>
-
             </div>
-
         </div>
-
     </main>
 
-
     <!-- ================= FOOTER ================= -->
-
     <footer class="login-footer">
-
-        <p>
-            Questions? Call
-            <a href="#">000-800-919-1694</a>
-        </p>
-
+        <p>Questions? Call <a href="#">000-800-919-1694</a></p>
         <div class="footer-links">
-
-            <a href="#">FAQ</a>
-            <a href="#">Help Centre</a>
+            <a href="help.html">FAQ</a>
+            <a href="help.html">Help Centre</a>
             <a href="#">Terms of Use</a>
             <a href="#">Privacy</a>
-
         </div>
-
     </footer>
 
-
-    <!-- Login JavaScript -->
-
-  <script type="module" src="../javascript/login.js"></script>
-  
+    <!-- Login JavaScript Module -->
+    <script type="module" src="../javascript/login.js"></script>
 
 </body>
 

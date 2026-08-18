@@ -1,0 +1,176 @@
+/* =========================================================
+   NETFLIX COMING SOON PAGE - STYLING
+   ========================================================= */
+
+:root {
+    --netflix-red: #E50914;
+    --black: #141414;
+    --white: #FFFFFF;
+    --text-gray: #B3B3B3;
+    --dark-gray: #181818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+}
+
+.coming-header {
+    height: 70px;
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(20, 20, 20, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.netflix-logo {
+    color: var(--netflix-red);
+    font-size: 1.85rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.browse-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.coming-container {
+    max-width: 900px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+}
+
+.coming-page-heading h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.coming-page-heading p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+
+.coming-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.coming-card {
+    background: var(--dark-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.coming-media {
+    position: relative;
+    width: 100%;
+    padding-top: 52%; /* approx video aspect ratio */
+    background: #000;
+}
+
+.coming-media iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.coming-details {
+    padding: 24px;
+}
+
+.coming-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.coming-date {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--netflix-red);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.coming-top-row h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.btn-remind {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-remind:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-remind.active {
+    background: var(--white);
+    color: #000;
+    border-color: var(--white);
+}
+
+.coming-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 14px;
+}
+
+.coming-meta .badge {
+    padding: 2px 6px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    font-size: 0.75rem;
+    color: var(--white);
+}
+
+.coming-desc {
+    font-size: 0.95rem;
+    color: #e5e5e5;
+    line-height: 1.5;
+}

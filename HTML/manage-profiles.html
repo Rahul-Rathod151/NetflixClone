@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's Watching? - Netflix</title>
+
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/manage-profiles.css">
+</head>
+
+<body>
+
+    <header class="profile-select-header">
+        <a href="browse.html" class="netflix-logo" aria-label="Netflix Home">NETFLIX</a>
+    </header>
+
+    <main class="profile-select-container">
+
+        <h1 id="screen-heading">Who's watching?</h1>
+
+        <div class="profiles-grid" id="profiles-grid"></div>
+
+        <div class="profile-actions-bar">
+            <button class="btn-manage-toggle" id="manage-toggle-btn">Manage Profiles</button>
+            <button class="btn-done-toggle" id="done-toggle-btn" style="display: none;">Done</button>
+        </div>
+
+    </main>
+
+    <!-- EDIT PROFILE MODAL -->
+    <div class="modal-backdrop" id="edit-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Edit Profile</h2>
+            
+            <div class="modal-avatar-preview">
+                <img id="modal-avatar-img" src="../assets/images/avatar1.jpg" alt="Avatar">
+            </div>
+
+            <div class="modal-form">
+                <label for="edit-profile-name">Profile Name</label>
+                <input type="text" id="edit-profile-name" placeholder="Name">
+
+                <div class="avatar-select-list">
+                    <label>Choose Avatar</label>
+                    <div class="avatar-options">
+                        <img src="../assets/images/avatar1.jpg" class="avatar-choice" data-src="../assets/images/avatar1.jpg" alt="Avatar 1">
+                        <img src="../assets/images/avatar2.jpg" class="avatar-choice" data-src="../assets/images/avatar2.jpg" alt="Avatar 2">
+                        <img src="../assets/images/avatar3.jpg" class="avatar-choice" data-src="../assets/images/avatar3.jpg" alt="Avatar 3">
+                        <img src="../assets/images/avatar4.jpg" class="avatar-choice" data-src="../assets/images/avatar4.jpg" alt="Avatar 4">
+                    </div>
+                </div>
+
+                <div class="kids-toggle-row">
+                    <label for="is-kids-checkbox">Kids Profile?</label>
+                    <input type="checkbox" id="is-kids-checkbox">
+                </div>
+            </div>
+
+            <div class="modal-buttons">
+                <button id="save-profile-btn" class="btn-modal-save">Save</button>
+                <button id="cancel-profile-btn" class="btn-modal-cancel">Cancel</button>
+                <button id="delete-profile-btn" class="btn-modal-delete">Delete Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="../javascript/manage-profiles.js"></script>
+
+</body>
+
+</html>

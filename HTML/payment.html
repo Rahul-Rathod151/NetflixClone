@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Netflix</title>
+
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+
+<body>
+
+    <header class="payment-header">
+        <a href="browse.html" class="netflix-logo" aria-label="Netflix Home">NETFLIX</a>
+        <a href="plans.html" class="change-plan-link">Change Plan</a>
+    </header>
+
+    <main class="payment-container">
+
+        <!-- DEMO NOTICE ALERT -->
+        <div class="demo-alert">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span><strong>FRONTEND DEMO ONLY:</strong> Do not enter real banking or credit card details. Click "Confirm & Subscribe" to simulate membership activation.</span>
+        </div>
+
+        <div class="payment-content-grid">
+
+            <!-- PAYMENT FORM -->
+            <div class="payment-form-section">
+                <span>STEP 2 OF 2</span>
+                <h1>Set up your payment</h1>
+                <p class="sub-text">Your membership starts as soon as you set up payment.</p>
+
+                <!-- TABS -->
+                <div class="payment-tabs">
+                    <button class="pay-tab active" data-tab="card">
+                        <i class="fa-solid fa-credit-card"></i> Credit / Debit Card
+                    </button>
+                    <button class="pay-tab" data-tab="upi">
+                        <i class="fa-solid fa-mobile-screen-button"></i> UPI / GPay
+                    </button>
+                </div>
+
+                <!-- CARD FORM -->
+                <form id="payment-form" class="payment-form">
+                    
+                    <div id="card-inputs">
+                        <div class="input-field">
+                            <label for="card-name">Cardholder Name</label>
+                            <input type="text" id="card-name" placeholder="Rahul Rathod" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="card-number">Card Number</label>
+                            <div class="input-with-icons">
+                                <input type="text" id="card-number" placeholder="4532 •••• •••• 8910" required>
+                                <div class="card-brands">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-field">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" placeholder="12 / 28" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="cvv">CVV</label>
+                                <input type="password" id="cvv" placeholder="•••" maxlength="4" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="upi-inputs" style="display: none;">
+                        <div class="input-field">
+                            <label for="upi-id">Virtual Payment Address (VPA / UPI ID)</label>
+                            <input type="text" id="upi-id" placeholder="username@upi or 9876543210@paytm">
+                        </div>
+                    </div>
+
+                    <div class="form-message" id="payment-msg"></div>
+
+                    <button type="submit" class="btn-confirm-subscribe" id="subscribe-btn">
+                        Confirm & Subscribe Demo
+                    </button>
+                </form>
+            </div>
+
+            <!-- ORDER SUMMARY SIDEBAR -->
+            <div class="order-summary-card">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span id="summary-plan-name">Premium Plan</span>
+                    <strong id="summary-plan-price">₹649/month</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Quality</span>
+                    <strong id="summary-plan-quality">4K + HDR</strong>
+                </div>
+                <hr>
+                <div class="summary-row total-row">
+                    <span>Total Due Today</span>
+                    <strong id="summary-plan-total">₹649</strong>
+                </div>
+                <p class="summary-terms">By clicking "Confirm & Subscribe", you agree to our Terms of Use and Privacy Statement.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="../javascript/payment.js"></script>
+
+</body>
+
+</html>

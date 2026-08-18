@@ -4,82 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>My List - Netflix</title>
-     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    >
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
 
-    <link rel="stylesheet" href="/css/my-list.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/my-list.css">
 </head>
 
 <body>
 
+    <!-- ================= HEADER ================= -->
     <header class="my-list-header">
-
-        <a href="browse.html" class="netflix-logo">
+        <a href="browse.html" class="netflix-logo" aria-label="Netflix Home">
             NETFLIX
         </a>
 
-        <nav>
-            <a href="browse.html">Home</a>
-
+        <nav class="nav-links">
+            <a href="browse.html">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
             <a href="search.html">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                Search
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </a>
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i> Account
             </a>
         </nav>
-
     </header>
 
-
+    <!-- ================= MAIN ================= -->
     <main class="my-list-page">
 
         <div class="page-heading">
+            <div class="heading-title">
+                <h1>My List</h1>
+                <span id="list-count" class="list-count">0 titles</span>
+            </div>
 
-            <h1>My List</h1>
-
-            <p id="list-count"></p>
-
+            <!-- Filters -->
+            <div class="list-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Action">Action</button>
+                <button class="filter-btn" data-filter="Drama">Drama</button>
+                <button class="filter-btn" data-filter="Comedy">Comedy</button>
+            </div>
         </div>
 
+        <!-- LIST GRID -->
+        <section class="my-list-grid" id="my-list-grid"></section>
 
-        <section
-            class="my-list-grid"
-            id="my-list-grid"
-        ></section>
-
-
-        <section
-            class="empty-list"
-            id="empty-list"
-        >
-
-            <i class="fa-solid fa-film"></i>
-
+        <!-- EMPTY STATE -->
+        <section class="empty-list" id="empty-list" style="display: none;">
+            <div class="empty-icon">
+                <i class="fa-solid fa-film"></i>
+            </div>
             <h2>Your list is empty</h2>
-
             <p>
-                Add movies and shows to your list
-                to watch them later.
+                Movies and shows you add to your list will appear here so you can easily watch them anytime.
             </p>
-
-            <a href="browse.html">
-                Explore Netflix
+            <a href="browse.html" class="btn-browse">
+                <i class="fa-solid fa-compass"></i> Explore Netflix
             </a>
-
         </section>
 
     </main>
 
-
-    <script src="/javascript/movies.js"></script>
-    <script src="/javascript/my-list.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="../javascript/movies.js"></script>
+    <script src="../javascript/my-list.js"></script>
 
 </body>
 
