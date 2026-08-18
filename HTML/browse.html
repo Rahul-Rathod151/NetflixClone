@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Netflix - Browse</title>
+
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Browse CSS -->
+    <link rel="stylesheet" href="/css/browse.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="browse-header">
+
+        <!-- Netflix Logo -->
+
+        <a href="browse.html" class="netflix-logo">
+            NETFLIX
+        </a>
+
+
+        <!-- Navigation -->
+
+        <nav class="main-nav" id="main-nav">
+
+            <a href="browse.html" class="active">
+                Home
+            </a>
+
+            <a href="#">
+                TV Shows
+            </a>
+
+            <a href="#">
+                Movies
+            </a>
+
+            <a href="#">
+                New & Popular
+            </a>
+
+            <a href="my-list.html">
+                My List
+            </a>
+
+        </nav>
+
+
+        <!-- Right Navigation -->
+
+        <div class="nav-actions">
+
+            <!-- Search -->
+
+            <button class="nav-icon" id="search-button" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+
+            <!-- Notification -->
+
+            <button class="nav-icon" id="notification-button" aria-label="Notifications">
+                <i class="fa-regular fa-bell"></i>
+            </button>
+
+
+            <!-- Profile -->
+
+            <button class="profile-button" id="profile-button" aria-label="Profile menu">
+
+                <span class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <i class="fa-solid fa-caret-down"></i>
+
+            </button>
+
+
+            <!-- Mobile Menu -->
+
+            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Profile Dropdown -->
+
+        <div class="profile-dropdown" id="profile-dropdown">
+
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+
+            <a href="my-list.html">
+                <i class="fa-solid fa-bookmark"></i>
+                My List
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+            <hr>
+
+            <a href="#" id="logout-button">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sign Out
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <!-- Background Video -->
+
+            <video class="hero-video" id="hero-video" autoplay muted loop playsinline>
+
+                <!-- Add your video URL here -->
+
+                <!-- <source src="/assets/videos/hero.webm" type="video/mp4"> -->
+
+            </video>
+
+
+            <!-- Dark Overlay -->
+
+            <div class="hero-overlay"></div>
+
+
+            <!-- Hero Content -->
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    <i class="fa-solid fa-n"></i>
+                    N SERIES
+                </p>
+
+
+                <h1 class="hero-title">
+                    Stranger Things
+                </h1>
+
+
+                <div class="hero-meta">
+
+                    <span>2026</span>
+
+                    <span>16+</span>
+
+                    <span>4 Seasons</span>
+
+                    <span>Drama</span>
+
+                </div>
+
+
+                <p class="hero-description">
+                    When a young boy vanishes, a small town uncovers
+                    a mystery involving secret experiments,
+                    terrifying supernatural forces and one strange
+                    little girl.
+                </p>
+
+
+                <!-- Hero Buttons -->
+
+                <div class="hero-buttons">
+
+                    <button class="play-button">
+
+                        <i class="fa-solid fa-play"></i>
+
+                        Play
+
+                    </button>
+
+
+                    <button class="info-button">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        More Info
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mute Button -->
+
+            <button class="hero-sound-button" id="hero-sound-button" aria-label="Unmute video">
+
+                <i class="fa-solid fa-volume-xmark"></i>
+
+            </button>
+
+
+            <!-- Age Rating -->
+
+            <div class="hero-rating">
+                16+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MOVIE SECTIONS
+        ================================================== -->
+
+        <!-- =================================================
+     MOVIE SECTIONS
+================================================== -->
+
+        <!-- TRENDING -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Trending Now</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="trending-row"></div>
+        </section>
+
+
+        <!-- POPULAR -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Popular on Netflix</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="popular-row"></div>
+        </section>
+
+
+        <!-- TOP 10 -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Top 10 in India</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="top10-row"></div>
+        </section>
+
+
+        <!-- COMEDY -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Comedy Movies</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="comedy-row"></div>
+        </section>
+
+
+        <!-- HORROR -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Horror Movies</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="horror-row"></div>
+        </section>
+
+
+
+        <!-- ACTION -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Action Movies</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="action-row"></div>
+        </section>
+
+
+        <!-- ROMANCE -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Romance Movies</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="romance-row"></div>
+        </section>
+
+
+        <!-- DRAMA -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Drama Movies</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="drama-row"></div>
+        </section>
+
+
+        <!-- INDIAN -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Indian Movies</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="indian-row"></div>
+        </section>
+
+
+        <!-- TOP PICKS -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Top Picks for You</h2>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-direction="left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button" data-direction="right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="movie-row" id="top-picks-row"></div>
+        </section>
+
+        
+
+       <!-- =================================================
+     90s BOLLYWOOD CLASSICS
+================================================== -->
+
+<section class="content-section">
+
+    <div class="section-header">
+
+        <h2>Bollywood Hit</h2>
+
+        <div class="carousel-buttons">
+
+            <button
+                class="carousel-button"
+                data-direction="left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button
+                class="carousel-button"
+                data-direction="right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div
+        class="movie-row"
+        id="90s-movies-row">
+    </div>
+
+</section>
+        <!-- =================================================
+             POPULAR
+        ================================================== -->
+
+        <section class="content-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Popular on Netflix
+                </h2>
+
+                <div class="carousel-buttons">
+
+                    <button class="carousel-button">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carousel-button">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="movie-row">
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie15.jpg " alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie16.jpg" alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie17.jpg" alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie18.jpg" alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie14.jpg" alt="Movie poster">
+                </article>
+
+                 <article class="poster-card">
+                    <img src="/assets/images/movie13.jpg" alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie20.jpg" alt="Movie poster">
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTINUE WATCHING
+        ================================================== -->
+
+        <section class="content-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Continue Watching
+                </h2>
+
+            </div>
+
+
+            <div class="movie-row">
+
+                <article class="continue-card">
+
+                    <div class="continue-image">
+
+                        <img src="/assets/images/movie9.jpg" alt="Movie poster">
+
+                        <button class="small-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <span style="width: 65%;"></span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="continue-card">
+
+                    <div class="continue-image">
+
+                        <img src="/assets/images/movie8.jpg" alt="Movie poster">
+
+                        <button class="small-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <span style="width: 40%;"></span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="continue-card">
+
+                    <div class="continue-image">
+
+                        <img src="/assets/images/movie1.jpg" alt="Movie poster">
+
+                        <button class="small-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <span style="width: 80%;"></span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TOP PICKS
+        ================================================== -->
+
+        <section class="content-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Top Picks for You
+                </h2>
+
+            </div>
+
+
+            <div class="movie-row">
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie10.jpg" alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie4.jpg" alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie5.jpg" alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src=" /assets/images/movie2.jpg" alt="Movie poster">
+                </article>
+
+                <article class="poster-card">
+                    <img src="/assets/images/movie1.jpg" alt="Movie poster">
+                </article>
+
+                 <article class="poster-card">
+                    <img src="/assets/images/movie11.jpg" alt="Movie poster">
+                </article>
+
+                 <article class="poster-card">
+                    <img src="/assets/images/movie12.jpg" alt="Movie poster">
+                </article>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+
+    <script src="/javascript/movies.js"></script>
+    <!-- <script src="/javascript/browse.js"></script> -->
+    <script type="module" src="../javascript/browse.js"></script>
+
+</body>
+
+</html>

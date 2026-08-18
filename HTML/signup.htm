@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up - Netflix</title>
+     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- Signup CSS -->
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="signup-header">
+
+        <a href="index.html" class="netflix-logo">
+            NETFLIX
+        </a>
+
+        <a href="login.html" class="signin-link">
+            Sign In
+        </a>
+
+    </header>
+
+
+    <!-- ================= SIGNUP PAGE ================= -->
+
+    <main class="signup-page">
+
+        <div class="signup-container">
+
+            <div class="signup-box">
+
+                <div class="signup-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <h1>Create your account</h1>
+
+                <p class="signup-description">
+                    Enter your details to create your Netflix account.
+                </p>
+
+
+                <!-- ================= FORM ================= -->
+
+                <form id="signup-form">
+
+                    <!-- Name -->
+
+                    <div class="input-group">
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder=" "
+                            autocomplete="name"
+                        >
+
+                        <label for="name">
+                            Full name
+                        </label>
+
+                        <small
+                            class="error-message"
+                            id="name-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder=" "
+                            autocomplete="email"
+                        >
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <small
+                            class="error-message"
+                            id="email-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder=" "
+                            autocomplete="new-password"
+                        >
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="password-toggle"
+                            aria-label="Show password"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+
+                        <small
+                            class="error-message"
+                            id="password-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="input-group">
+
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            placeholder=" "
+                            autocomplete="new-password"
+                        >
+
+                        <label for="confirm-password">
+                            Confirm password
+                        </label>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="confirm-password-toggle"
+                            aria-label="Show password"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+
+                        <small
+                            class="error-message"
+                            id="confirm-password-error">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Create Account -->
+
+                    <button
+                        type="submit"
+                        class="signup-button"
+                    >
+                        Create Account
+                    </button>
+
+
+                    <!-- OR -->
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+
+                    <!-- Google -->
+
+                    <button
+                        type="button"
+                        class="google-button"
+                        id="google-signup"
+                    >
+                        <i class="fa-brands fa-google"></i>
+                        Continue with Google
+                    </button>
+
+
+                    <!-- Login -->
+
+                    <p class="login-text">
+
+                        Already have an account?
+
+                        <a href="login.html">
+                            Sign in now.
+                        </a>
+
+                    </p>
+
+
+                    <!-- Message -->
+
+                    <div
+                        class="signup-message"
+                        id="signup-message">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="signup-footer">
+
+        <p>
+            Questions? Call
+            <a href="#">000-800-919-1694</a>
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">FAQ</a>
+            <a href="#">Help Centre</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy</a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <!-- <script src="/javascript//signup.js"></script> -->
+     <!-- <script src="/javascript/signup.js"></script> -->
+      <script type="module" src="../javascript/signup.js"></script>
+
+</body>
+
+</html>

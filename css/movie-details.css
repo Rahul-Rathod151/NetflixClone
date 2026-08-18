@@ -1,0 +1,559 @@
+/* =========================================================
+   MOVIE DETAILS PAGE
+   ========================================================= */
+
+:root {
+    --red: #e50914;
+    --black: #000;
+    --white: #fff;
+    --gray: #b3b3b3;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-width: 320px;
+
+    background: #000;
+
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.details-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    padding: 0 4%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 100;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .9),
+            transparent
+        );
+}
+
+
+/* ================= LOGO ================= */
+
+.netflix-logo {
+    color: var(--red);
+
+    text-decoration: none;
+
+    font-size: 2rem;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.back-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: opacity .2s ease;
+}
+
+
+.back-button:hover {
+    opacity: .7;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.movie-details-hero {
+    position: relative;
+
+    min-height: 700px;
+
+    height: 85vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-end;
+}
+
+
+/* ================= BACKGROUND ================= */
+
+.details-background {
+    position: absolute;
+
+    inset: 0;
+}
+
+
+.details-background img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* ================= GRADIENT ================= */
+
+.details-gradient {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.95) 0%,
+            rgba(0,0,0,.7) 35%,
+            rgba(0,0,0,.15) 75%
+        ),
+        linear-gradient(
+            to top,
+            #000 0%,
+            transparent 45%
+        );
+}
+
+
+/* =========================================================
+   DETAILS CONTENT
+   ========================================================= */
+
+.details-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 0 4% 100px;
+}
+
+
+.details-info {
+    max-width: 650px;
+}
+
+
+/* ================= NETFLIX SERIES ================= */
+
+.netflix-series {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.netflix-series span {
+    color: var(--red);
+
+    font-size: 22px;
+
+    margin-right: 5px;
+}
+
+
+/* ================= TITLE ================= */
+
+#movie-title {
+    margin-bottom: 20px;
+
+    font-size: clamp(
+        3rem,
+        7vw,
+        6.5rem
+    );
+
+    line-height: .95;
+
+    letter-spacing: -3px;
+
+    font-weight: 900;
+
+    text-shadow:
+        2px 2px 15px rgba(0,0,0,.8);
+}
+
+
+/* ================= META ================= */
+
+.movie-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-bottom: 20px;
+
+    color: #ddd;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+#movie-rating {
+    border: 1px solid #aaa;
+
+    padding: 2px 6px;
+}
+
+
+/* ================= DESCRIPTION ================= */
+
+.movie-description {
+    max-width: 600px;
+
+    margin-bottom: 28px;
+
+    color: #ddd;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.details-buttons {
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.play-button,
+.list-button {
+    height: 48px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+
+.play-button {
+    background: #fff;
+
+    color: #000;
+}
+
+
+.play-button:hover {
+    background: #ddd;
+
+    transform: scale(1.03);
+}
+
+
+.list-button {
+    background: rgba(
+        109,
+        109,
+        110,
+        .75
+    );
+
+    color: #fff;
+}
+
+
+.list-button:hover {
+    background: rgba(
+        109,
+        109,
+        110,
+        .55
+    );
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   TRAILER
+   ========================================================= */
+
+.trailer-section,
+.related-section {
+    padding: 40px 4%;
+}
+
+
+.section-title {
+    margin-bottom: 18px;
+}
+
+
+.section-title h2 {
+    font-size: 24px;
+}
+
+
+/* ================= VIDEO ================= */
+
+.video-wrapper {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    background: #111;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.6);
+}
+
+
+.youtube-player {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    background: #111;
+}
+
+
+.youtube-player iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* =========================================================
+   RELATED MOVIES
+   ========================================================= */
+
+.related-movies {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+
+.related-card {
+    position: relative;
+
+    aspect-ratio: 2 / 3;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.related-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.related-card:hover {
+    transform: scale(1.05);
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .details-header {
+        height: 60px;
+
+        padding: 0 20px;
+    }
+
+
+    .netflix-logo {
+        font-size: 1.7rem;
+    }
+
+
+    .back-button span {
+        display: none;
+    }
+
+
+    .movie-details-hero {
+        min-height: 650px;
+
+        height: 80vh;
+    }
+
+
+    .details-content {
+        padding: 0 20px 60px;
+    }
+
+
+    .details-info {
+        max-width: 100%;
+    }
+
+
+    #movie-title {
+        font-size: 3rem;
+
+        letter-spacing: -1px;
+    }
+
+
+    .movie-description {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    .movie-meta {
+        font-size: 12px;
+
+        gap: 8px;
+    }
+
+
+    .play-button,
+    .list-button {
+        height: 42px;
+
+        padding: 0 17px;
+
+        font-size: 14px;
+    }
+
+
+    .trailer-section,
+    .related-section {
+        padding: 30px 20px;
+    }
+
+
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+
+    .related-movies {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+}

@@ -1,0 +1,324 @@
+:root {
+    --red: #e50914;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    background: #141414;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================= HEADER ================= */
+
+.my-list-header {
+    height: 70px;
+
+    padding: 0 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #000;
+}
+
+.netflix-logo {
+    color: var(--red);
+
+    text-decoration: none;
+
+    font-size: 2rem;
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+.my-list-header nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.my-list-header nav a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color .2s ease;
+}
+
+.my-list-header nav a:hover {
+    color: #aaa;
+}
+
+
+/* ================= PAGE ================= */
+
+.my-list-page {
+    padding: 45px 4% 60px;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.page-heading p {
+    color: #999;
+
+    font-size: 14px;
+}
+
+
+/* ================= GRID ================= */
+
+.my-list-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* ================= CARD ================= */
+
+.my-list-card {
+    position: relative;
+
+    aspect-ratio: 2 / 3;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    background: #222;
+
+    transition:
+        transform .3s ease;
+}
+
+.my-list-card:hover {
+    transform: scale(1.06);
+
+    z-index: 5;
+}
+
+.my-list-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ================= OVERLAY ================= */
+
+.my-list-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, .95),
+            transparent 65%
+        );
+
+    opacity: 0;
+
+    transition: opacity .25s ease;
+}
+
+.my-list-card:hover .my-list-overlay {
+    opacity: 1;
+}
+
+.my-list-title {
+    font-size: 16px;
+
+    margin-bottom: 7px;
+}
+
+.my-list-info {
+    display: flex;
+
+    gap: 8px;
+
+    color: #ccc;
+
+    font-size: 11px;
+}
+
+
+/* ================= REMOVE ================= */
+
+.remove-button {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, .75);
+
+    color: #fff;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    transition:
+        opacity .2s ease,
+        background .2s ease;
+}
+
+.my-list-card:hover .remove-button {
+    opacity: 1;
+}
+
+.remove-button:hover {
+    background: var(--red);
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty-list {
+    min-height: 400px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.empty-list i {
+    font-size: 55px;
+
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+.empty-list h2 {
+    margin-bottom: 10px;
+}
+
+.empty-list p {
+    color: #999;
+
+    margin-bottom: 25px;
+}
+
+.empty-list a {
+    padding: 12px 22px;
+
+    border-radius: 4px;
+
+    background: #fff;
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+    .my-list-grid {
+        grid-template-columns:
+            repeat(5, 1fr);
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .my-list-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .my-list-header {
+        padding: 0 20px;
+    }
+
+    .my-list-page {
+        padding: 30px 20px;
+    }
+
+    .my-list-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .my-list-card:hover {
+        transform: none;
+    }
+
+    .my-list-overlay {
+        opacity: 1;
+    }
+
+    .remove-button {
+        opacity: 1;
+    }
+
+}

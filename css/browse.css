@@ -1,0 +1,1620 @@
+/* =========================================================
+   NETFLIX BROWSE PAGE
+   ========================================================= */
+
+
+/* ================= ROOT ================= */
+
+:root {
+    --netflix-red: #e50914;
+    --black: #000;
+    --white: #fff;
+    --text-gray: #b3b3b3;
+    --dark-gray: #181818;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-width: 320px;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* Remove default button styles */
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.browse-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    padding: 0 4%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+
+    z-index: 1000;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.85),
+        transparent
+    );
+
+    transition:
+        background 0.3s ease,
+        height 0.3s ease;
+}
+
+
+/* Header after scrolling */
+
+.browse-header.scrolled {
+    background: #141414;
+
+    height: 64px;
+}
+
+
+/* ================= NETFLIX LOGO ================= */
+
+.netflix-logo {
+    flex-shrink: 0;
+
+    color: var(--netflix-red);
+
+    text-decoration: none;
+
+    font-size: 2rem;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+   ========================================================= */
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+.main-nav a {
+    color: #e5e5e5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #fff;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RIGHT NAVIGATION
+   ========================================================= */
+
+.nav-actions {
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* ================= NAV ICON ================= */
+
+.nav-icon {
+    border: none;
+
+    background: transparent;
+
+    color: var(--white);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* ================= PROFILE ================= */
+
+.profile-button {
+    border: none;
+
+    background: transparent;
+
+    color: var(--white);
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.profile-avatar {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+
+    background: #e50914;
+
+    font-size: 16px;
+}
+
+
+.profile-button > i {
+    font-size: 12px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.profile-button.active > i {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+   ========================================================= */
+
+.profile-dropdown {
+    position: absolute;
+
+    top: 62px;
+
+    right: 4%;
+
+    width: 210px;
+
+    padding: 10px 0;
+
+    background: rgba(20, 20, 20, 0.98);
+
+    border: 1px solid #333;
+
+    border-radius: 4px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.profile-dropdown.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+.profile-dropdown a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 16px;
+
+    color: #ddd;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: background 0.2s ease;
+}
+
+
+.profile-dropdown a:hover {
+    background: #333;
+
+    color: #fff;
+}
+
+
+.profile-dropdown a i {
+    width: 18px;
+
+    text-align: center;
+}
+
+
+.profile-dropdown hr {
+    border: 0;
+
+    border-top: 1px solid #333;
+
+    margin: 8px 0;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    height: 90vh;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* ================= HERO VIDEO ================= */
+
+.hero-video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* ================= HERO OVERLAY ================= */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.55) 35%,
+            rgba(0, 0, 0, 0.1) 70%
+        ),
+        linear-gradient(
+            to top,
+            #000 0%,
+            transparent 35%
+        );
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 45%;
+
+    max-width: 650px;
+
+    margin-left: 4%;
+
+    margin-top: 80px;
+}
+
+
+/* ================= N SERIES ================= */
+
+.hero-label {
+    margin-bottom: 15px;
+
+    color: #ddd;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.hero-label i {
+    color: var(--netflix-red);
+
+    margin-right: 6px;
+}
+
+
+/* ================= HERO TITLE ================= */
+
+.hero-title {
+    margin-bottom: 18px;
+
+    font-size: clamp(3rem, 6vw, 6rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ================= HERO META ================= */
+
+.hero-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+    color: #ddd;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.hero-meta span:nth-child(2) {
+    border: 1px solid #aaa;
+
+    padding: 2px 6px;
+}
+
+
+/* ================= HERO DESCRIPTION ================= */
+
+.hero-description {
+    max-width: 600px;
+
+    margin-bottom: 25px;
+
+    color: #eee;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    text-shadow: 1px 1px 5px #000;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.play-button,
+.info-button {
+    height: 45px;
+
+    padding: 0 24px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.play-button {
+    background: #fff;
+
+    color: #000;
+}
+
+
+.play-button:hover {
+    background: #ddd;
+
+    transform: scale(1.03);
+}
+
+
+.info-button {
+    background: rgba(109, 109, 110, 0.7);
+
+    color: #fff;
+}
+
+
+.info-button:hover {
+    background: rgba(109, 109, 110, 0.5);
+
+    transform: scale(1.03);
+}
+
+
+/* ================= SOUND BUTTON ================= */
+
+.hero-sound-button {
+    position: absolute;
+
+    right: 4%;
+
+    bottom: 100px;
+
+    z-index: 3;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+
+.hero-sound-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ================= RATING ================= */
+
+.hero-rating {
+    position: absolute;
+
+    right: 0;
+
+    bottom: 100px;
+
+    z-index: 3;
+
+    min-width: 70px;
+
+    padding: 8px 14px;
+
+    border-left: 3px solid #fff;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    color: #fff;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   CONTENT SECTIONS
+   ========================================================= */
+
+.content-section {
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: -30px;
+
+    padding: 0 4% 45px;
+}
+
+
+.content-section + .content-section {
+    margin-top: -17px;
+}
+
+
+/* ================= SECTION HEADER ================= */
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+
+.section-header h2 {
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CAROUSEL BUTTONS
+   ========================================================= */
+
+.carousel-buttons {
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.carousel-button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   MOVIE ROW
+   ========================================================= */
+
+.movie-row {
+    display: flex;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    overflow-y: visible;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    padding: 5px 0 20px;
+}
+
+
+.movie-row::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   POSTER CARD
+   ========================================================= */
+
+.poster-card {
+    position: relative;
+
+    flex: 0 0 calc((100% - 50px) / 6);
+
+    aspect-ratio: 2 / 3;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #222;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    transform-origin: center center;
+}
+
+
+.poster-card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.poster-card:hover {
+    transform: scale(1.07);
+
+    z-index: 20;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+
+.poster-card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   RANKED MOVIE CARD
+   ========================================================= */
+
+.movie-card {
+    position: relative;
+
+    flex: 0 0 calc((100% - 50px) / 6);
+
+    aspect-ratio: 2 / 3;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    display: block;
+}
+
+
+.movie-card:hover {
+    transform: scale(1.07);
+
+    z-index: 20;
+}
+
+
+/* ================= RANK ================= */
+
+.movie-rank {
+    position: absolute;
+
+    left: -8px;
+
+    bottom: -12px;
+
+    font-size: clamp(5rem, 8vw, 8rem);
+
+    line-height: 0.8;
+
+    font-weight: 900;
+
+    color: #000;
+
+    -webkit-text-stroke: 2px #fff;
+
+    text-shadow:
+        3px 3px 0 #000,
+        -2px -2px 0 #000;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTINUE WATCHING
+   ========================================================= */
+
+.continue-card {
+    position: relative;
+
+    flex: 0 0 calc((100% - 30px) / 4);
+
+    min-width: 230px;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    background: #181818;
+
+    transition: transform 0.3s ease;
+}
+
+
+.continue-card:hover {
+    transform: scale(1.04);
+
+    z-index: 20;
+}
+
+
+.continue-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+}
+
+
+.continue-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ================= SMALL PLAY ================= */
+
+.small-play-button {
+    position: absolute;
+
+    left: 15px;
+    bottom: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    border: 2px solid white;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    color: white;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transform: scale(0.8);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.continue-card:hover .small-play-button {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* ================= PROGRESS ================= */
+
+.progress-bar {
+    width: 100%;
+
+    height: 4px;
+
+    background: #555;
+}
+
+
+.progress-bar span {
+    display: block;
+
+    height: 100%;
+
+    background: var(--netflix-red);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .browse-header {
+        gap: 22px;
+    }
+
+    .main-nav {
+        gap: 14px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .hero-content {
+        width: 55%;
+    }
+
+    .poster-card,
+    .movie-card {
+        flex-basis: calc((100% - 30px) / 4);
+    }
+
+    .continue-card {
+        flex-basis: calc((100% - 20px) / 3);
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .main-nav a:nth-child(4),
+    .main-nav a:nth-child(5) {
+        display: none;
+    }
+
+    .hero {
+        height: 75vh;
+
+        min-height: 520px;
+    }
+
+    .hero-content {
+        width: 65%;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .poster-card,
+    .movie-card {
+        flex-basis: calc((100% - 20px) / 3);
+    }
+
+    .continue-card {
+        flex-basis: calc((100% - 10px) / 2);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .browse-header {
+        height: 60px;
+
+        padding: 0 20px;
+
+        gap: 15px;
+    }
+
+
+    .browse-header.scrolled {
+        height: 60px;
+    }
+
+
+    .netflix-logo {
+        font-size: 1.7rem;
+    }
+
+
+    /* Hide desktop navigation */
+
+    .main-nav {
+        position: absolute;
+
+        top: 60px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 15px 20px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        background: #141414;
+    }
+
+
+    .main-nav.active {
+        display: flex;
+    }
+
+
+    .main-nav a {
+        width: 100%;
+
+        padding: 12px 0;
+
+        font-size: 15px;
+    }
+
+
+    .main-nav a:nth-child(4),
+    .main-nav a:nth-child(5) {
+        display: block;
+    }
+
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+
+    .nav-actions {
+        gap: 13px;
+    }
+
+
+    .nav-icon {
+        font-size: 18px;
+    }
+
+
+    .profile-avatar {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .profile-button > i {
+        display: none;
+    }
+
+
+    /* Profile dropdown */
+
+    .profile-dropdown {
+        top: 58px;
+
+        right: 20px;
+
+        width: 190px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        height: 70vh;
+
+        min-height: 500px;
+
+        align-items: flex-end;
+    }
+
+
+    .hero-video {
+        object-position: center;
+    }
+
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                to top,
+                #000 5%,
+                rgba(0, 0, 0, 0.65) 45%,
+                rgba(0, 0, 0, 0.15) 100%
+            );
+    }
+
+
+    .hero-content {
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+
+        padding: 0 20px 70px;
+    }
+
+
+    .hero-label {
+        font-size: 11px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .hero-title {
+        font-size: 3rem;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .hero-meta {
+        gap: 10px;
+
+        margin-bottom: 12px;
+
+        font-size: 12px;
+    }
+
+
+    .hero-description {
+        max-width: 500px;
+
+        font-size: 13px;
+
+        line-height: 1.4;
+
+        display: -webkit-box;
+
+        -webkit-line-clamp: 3;
+
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+
+        margin-bottom: 16px;
+    }
+
+
+    .hero-buttons {
+        gap: 8px;
+    }
+
+
+    .play-button,
+    .info-button {
+        height: 40px;
+
+        padding: 0 17px;
+
+        font-size: 14px;
+    }
+
+
+    .hero-sound-button {
+        right: 20px;
+
+        bottom: 70px;
+
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .hero-rating {
+        display: none;
+    }
+
+
+    /* Sections */
+
+    .content-section {
+        padding: 0 20px 30px;
+
+        margin-top: -15px;
+    }
+
+
+    .section-header {
+        margin-bottom: 10px;
+    }
+
+
+    .section-header h2 {
+        font-size: 18px;
+    }
+
+
+    .carousel-buttons {
+        display: none;
+    }
+
+
+    .movie-row {
+        gap: 7px;
+
+        padding-bottom: 12px;
+    }
+
+
+    .poster-card,
+    .movie-card {
+        flex: 0 0 calc((100% - 14px) / 3);
+
+        min-width: 115px;
+    }
+
+
+    .movie-rank {
+        left: -5px;
+
+        bottom: -7px;
+
+        font-size: 5rem;
+
+        -webkit-text-stroke: 1.5px #fff;
+    }
+
+
+    .continue-card {
+        flex: 0 0 80%;
+
+        min-width: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .nav-actions {
+        gap: 9px;
+    }
+
+
+    .nav-icon {
+        font-size: 16px;
+    }
+
+
+    .netflix-logo {
+        font-size: 1.5rem;
+    }
+
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+
+    .poster-card,
+    .movie-card {
+        flex-basis: calc((100% - 7px) / 2);
+
+        min-width: 135px;
+    }
+
+
+    .continue-card {
+        flex-basis: 90%;
+    }
+
+}
+
+/* =========================================================
+   YOUTUBE TRAILER MOVIE CARDS
+   ========================================================= */
+
+.trailer-card {
+    position: relative;
+
+    flex: 0 0 calc((100% - 50px) / 6);
+
+    aspect-ratio: 16 / 9;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    background: #181818;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    transform-origin: center center;
+}
+
+
+.trailer-card:hover {
+    transform: scale(1.18);
+
+    z-index: 50;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+
+.trailer-container {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ================= POSTER ================= */
+
+.movie-poster {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s ease;
+}
+
+
+.trailer-card:hover .movie-poster {
+    transform: scale(1.03);
+}
+
+
+/* ================= YOUTUBE PREVIEW ================= */
+
+.trailer-preview {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+
+    background: #000;
+}
+
+
+.trailer-preview.visible {
+    opacity: 1;
+}
+
+
+.trailer-preview iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    pointer-events: none;
+
+    transform: scale(1.08);
+}
+
+
+/* ================= OVERLAY ================= */
+
+.movie-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95),
+            transparent 65%
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.25s ease;
+}
+
+
+.trailer-card:hover .movie-overlay {
+    opacity: 1;
+}
+
+
+.movie-overlay h3 {
+    margin-top: 8px;
+
+    font-size: 15px;
+
+    color: white;
+}
+
+
+.movie-info {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 6px;
+
+    color: #ddd;
+
+    font-size: 11px;
+}
+
+
+.movie-info span:nth-child(2) {
+    border: 1px solid #aaa;
+
+    padding: 1px 4px;
+}
+
+
+/* ================= CARD BUTTONS ================= */
+
+.card-play-button,
+.card-add-button {
+    width: 34px;
+    height: 34px;
+
+    border: 2px solid #fff;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    color: white;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.card-play-button:hover,
+.card-add-button:hover {
+    background: white;
+
+    color: black;
+
+    transform: scale(1.1);
+}
+
+
+.card-add-button {
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 48px;
+}
+
+
+/* =========================================================
+   RESPONSIVE TRAILER CARDS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .trailer-card {
+        flex-basis: calc((100% - 30px) / 4);
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .trailer-card {
+        flex-basis: calc((100% - 20px) / 3);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .trailer-card {
+        flex: 0 0 70%;
+
+        min-width: 220px;
+    }
+
+
+    /*
+       On touch devices there is no real
+       hover, so don't scale too aggressively.
+    */
+
+    .trailer-card:hover {
+        transform: none;
+
+        box-shadow: none;
+    }
+
+    .movie-overlay {
+        opacity: 1;
+    }
+
+}
+
+
+
+

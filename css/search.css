@@ -1,0 +1,468 @@
+/* =========================================================
+   SEARCH PAGE
+   ========================================================= */
+
+:root {
+    --red: #e50914;
+    --black: #000;
+    --white: #fff;
+    --gray: #b3b3b3;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-width: 320px;
+
+    background: #000;
+
+    color: #fff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.search-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    padding: 0 4%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 100;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .95),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.netflix-logo {
+    color: var(--red);
+
+    text-decoration: none;
+
+    font-size: 2rem;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-button {
+    color: #fff;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.back-button:hover {
+    color: #ccc;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.search-page {
+    min-height: 100vh;
+
+    padding:
+        120px 4% 60px;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+   ========================================================= */
+
+.search-box {
+    width: 100%;
+
+    max-width: 800px;
+
+    height: 58px;
+
+    margin: 0 auto 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #fff;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+
+.search-box > i {
+    color: #555;
+
+    font-size: 20px;
+
+    padding-left: 20px;
+}
+
+
+.search-box input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 18px;
+
+    font-size: 18px;
+
+    color: #111;
+
+    background: transparent;
+}
+
+
+.search-box input::placeholder {
+    color: #777;
+}
+
+
+#clear-search {
+    width: 55px;
+
+    height: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: #555;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    display: none;
+}
+
+
+#clear-search:hover {
+    color: #111;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.search-heading {
+    margin-bottom: 25px;
+}
+
+
+.search-heading h1 {
+    font-size: 26px;
+
+    margin-bottom: 6px;
+}
+
+
+#result-count {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESULTS GRID
+   ========================================================= */
+
+.search-results {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   MOVIE CARD
+   ========================================================= */
+
+.search-card {
+    position: relative;
+
+    aspect-ratio: 2 / 3;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    background: #181818;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.search-card:hover {
+    transform: scale(1.06);
+
+    z-index: 5;
+}
+
+
+.search-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   CARD OVERLAY
+   ========================================================= */
+
+.search-card-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.95),
+            transparent 65%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity .25s ease;
+}
+
+
+.search-card:hover
+.search-card-overlay {
+    opacity: 1;
+}
+
+
+.search-card-title {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+.search-card-info {
+    display: flex;
+
+    gap: 8px;
+
+    color: #ddd;
+
+    font-size: 11px;
+}
+
+
+.search-card-info span:nth-child(2) {
+    border: 1px solid #aaa;
+
+    padding: 1px 4px;
+}
+
+
+/* =========================================================
+   EMPTY STATES
+   ========================================================= */
+
+.empty-state,
+.no-results {
+    min-height: 300px;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    color: #aaa;
+}
+
+
+.empty-state i,
+.no-results i {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+
+    color: #555;
+}
+
+
+.empty-state h2,
+.no-results h2 {
+    color: #fff;
+
+    margin-bottom: 10px;
+}
+
+
+.empty-state p,
+.no-results p {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .search-results {
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .search-results {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .search-header {
+        height: 60px;
+
+        padding: 0 20px;
+    }
+
+
+    .netflix-logo {
+        font-size: 1.7rem;
+    }
+
+
+    .search-page {
+        padding:
+            100px 20px 40px;
+    }
+
+
+    .search-box {
+        height: 50px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+
+    .search-heading h1 {
+        font-size: 21px;
+    }
+
+
+    .search-results {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+
+    .search-card-overlay {
+        opacity: 1;
+    }
+
+}

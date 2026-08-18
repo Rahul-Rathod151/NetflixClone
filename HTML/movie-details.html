@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Details - Netflix</title>
+     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <link rel="stylesheet" href="/css/movie-details.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="details-header">
+
+        <a href="browse.html" class="netflix-logo">
+            NETFLIX
+        </a>
+
+        <a href="browse.html" class="back-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Browse</span>
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="movie-details-hero">
+
+            <div class="details-background">
+                <img id="background-image" src="" alt="">
+            </div>
+
+            <div class="details-gradient"></div>
+
+
+            <div class="details-content">
+
+                <div class="details-info">
+
+                    <p class="netflix-series">
+                        <span>N</span>
+                        NETFLIX
+                    </p>
+
+                    <h1 id="movie-title">
+                        Movie Title
+                    </h1>
+
+
+                    <div class="movie-meta">
+
+                        <span id="movie-year">
+                            2025
+                        </span>
+
+                        <span id="movie-rating">
+                            16+
+                        </span>
+
+                        <span id="movie-seasons">
+                            1 Season
+                        </span>
+
+                        <span id="movie-genre">
+                            Drama
+                        </span>
+
+                    </div>
+
+
+                    <p
+                        class="movie-description"
+                        id="movie-description"
+                    >
+                        Movie description goes here.
+                    </p>
+
+
+                    <div class="details-buttons">
+
+                        <button
+                            class="play-button"
+                            id="play-button"
+                        >
+                            <i class="fa-solid fa-play"></i>
+                            Play
+                        </button>
+
+
+                        <button
+                            class="list-button"
+                            id="list-button"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Add to My List</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRAILER ================= -->
+
+        <section class="trailer-section">
+
+            <div class="section-title">
+
+                <h2>
+                    Trailer
+                </h2>
+
+            </div>
+
+
+            <div class="video-wrapper">
+
+                <div
+                    class="youtube-player"
+                    id="youtube-player"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MORE LIKE THIS ================= -->
+
+        <section class="related-section">
+
+            <div class="section-title">
+
+                <h2>
+                    More Like This
+                </h2>
+
+            </div>
+
+
+            <div
+                class="related-movies"
+                id="related-movies"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="/javascript/movies.js"></script>
+    <script src="/javascript/movie-details.js"></script>
+
+</body>
+
+</html>

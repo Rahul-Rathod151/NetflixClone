@@ -1,0 +1,377 @@
+:root {
+    --red: #e50914;
+    --black: #000;
+    --dark: #181818;
+    --border: #333;
+    --gray: #aaa;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+
+    background: #141414;
+    color: var(--white);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================= HEADER ================= */
+
+.profile-header {
+    height: 70px;
+
+    padding: 0 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #000;
+}
+
+.netflix-logo {
+    color: var(--red);
+
+    text-decoration: none;
+
+    font-size: 2rem;
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+.browse-link {
+    color: #fff;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+}
+
+.browse-link:hover {
+    color: #bbb;
+}
+
+
+/* ================= PAGE ================= */
+
+.profile-page {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+
+    padding: 60px 20px;
+}
+
+
+/* ================= CARD ================= */
+
+.profile-card {
+    width: 100%;
+    max-width: 850px;
+
+    background: #181818;
+
+    border-radius: 6px;
+
+    padding: 40px;
+}
+
+
+/* ================= PROFILE TOP ================= */
+
+.profile-top {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 6px;
+
+    background: #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+}
+
+.profile-basic h1 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.profile-basic p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* ================= SECTION ================= */
+
+.profile-section {
+    padding: 30px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-section h2 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ================= ROW ================= */
+
+.profile-row {
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #292929;
+}
+
+.profile-row:last-child {
+    border-bottom: none;
+}
+
+.profile-row > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.profile-row > div > i {
+    width: 25px;
+
+    color: #aaa;
+
+    text-align: center;
+}
+
+.profile-row strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 15px;
+}
+
+.profile-row p {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.profile-row button,
+.profile-row a {
+    border: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.profile-row button:hover,
+.profile-row a:hover {
+    color: #bbb;
+}
+
+
+/* ================= SELECT ================= */
+
+#language-select {
+    background: #222;
+
+    color: #fff;
+
+    border: 1px solid #555;
+
+    border-radius: 3px;
+
+    padding: 8px 12px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* ================= SWITCH ================= */
+
+.switch {
+    position: relative;
+
+    width: 48px;
+    height: 26px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch span {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 20px;
+
+    background: #555;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.switch span::before {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: 3px;
+    top: 3px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    transition: .2s;
+}
+
+.switch input:checked + span {
+    background: var(--red);
+}
+
+.switch input:checked + span::before {
+    transform: translateX(22px);
+}
+
+
+/* ================= ACTIONS ================= */
+
+.profile-actions {
+    padding-top: 30px;
+}
+
+.logout-button {
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background .2s;
+}
+
+.logout-button:hover {
+    background: #f6121d;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .profile-header {
+        height: 60px;
+
+        padding: 0 20px;
+    }
+
+    .netflix-logo {
+        font-size: 1.7rem;
+    }
+
+    .profile-page {
+        padding: 30px 15px;
+    }
+
+    .profile-card {
+        padding: 25px 20px;
+    }
+
+    .profile-top {
+        gap: 15px;
+    }
+
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+
+        font-size: 30px;
+    }
+
+    .profile-basic h1 {
+        font-size: 24px;
+    }
+
+    .profile-row {
+        gap: 10px;
+    }
+
+    .profile-row > div {
+        gap: 10px;
+    }
+
+}

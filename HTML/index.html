@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ================= PAGE SETTINGS ================= -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Netflix - Watch Movies & TV Shows</title>
+     <!-- <link rel="icon" type="image/jpeg" href="../assets/netflix.jpg" /> -->
+
+     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <!-- ================= GOOGLE FONT ================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ================= CSS ================= -->
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         HERO / LANDING SECTION
+         ================================================== -->
+
+    <main class="hero-section">
+
+        <!-- ================= NAVBAR ================= -->
+
+        <header class="navbar">
+
+            <!-- Netflix Logo -->
+            <a href="index.html" class="netflix-logo" aria-label="Netflix Home">
+                NETFLIX
+            </a>
+
+
+            <!-- Right Side Navigation -->
+            <div class="navbar-actions">
+
+                <!-- Language Selector -->
+                <div class="language-selector">
+
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+
+                    <select id="language-select" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="mr">मराठी</option>
+                    </select>
+
+                </div>
+
+                <!-- Sign In Button -->
+                <a href="login.html" class="signin-button">
+                    Sign In
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO CONTENT ================= -->
+
+        <section class="hero-content">
+
+            <h1 id="hero-title">
+                Unlimited movies,
+                <br>
+                shows, and more
+            </h1>
+
+            <h2 id="hero-subtitle">
+                Starts at ₹149. Cancel at any time.
+            </h2>
+
+            <p id="hero-description">
+                Ready to watch? Enter your email to create or restart
+                your membership.
+            </p>
+
+
+            <!-- ================= EMAIL FORM ================= -->
+
+            <form class="email-form" id="email-form">
+
+                <div class="input-container">
+
+                    <label for="email-input" class="visually-hidden">
+                        Email address
+                    </label>
+
+                    <input type="email" id="email-input" name="email" placeholder="Email address" autocomplete="email">
+
+                    <!-- Error Message -->
+                    <p class="error-message" id="error-message">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        Please enter a valid email address.
+                    </p>
+
+                </div>
+
+                <button type="submit"  class="get-started-button" >
+
+                    <span id="get-started-text">
+                        Get Started
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= HERO BOTTOM DIVIDER ================= -->
+
+        <div class="hero-divider"></div>
+
+    </main>
+    <!-- ==================================================
+     TRENDING NOW SECTION
+     ================================================== -->
+
+    <section class="trending-section">
+
+        <div class="section-container">
+
+            <!-- Section Heading -->
+
+            <h2 class="section-title">
+                Trending Now
+            </h2>
+
+
+            <!-- ================= MOVIE SLIDER ================= -->
+
+            <div class="trending-slider">
+
+
+                <!-- Left Scroll Button -->
+
+                <button class="slider-button slider-button-left" id="trending-left" aria-label="Previous movies">
+
+                    <i class="fa-solid fa-chevron-left"></i>
+
+                </button>
+
+
+                <!-- Movie List -->
+
+                <div class="trending-movies" id="trending-movies">
+
+
+                    <!-- ================= MOVIE 1 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            1
+                        </span>
+
+                        <img src="/assets/images/movie11.jpg" alt="Movie 1">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 2 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            2
+                        </span>
+
+                        <img src="/assets/images/movie12.jpg" alt="Movie 2">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 3 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            3
+                        </span>
+
+                        <img src="/assets/images/movie13.jpg" alt="Movie 3">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 4 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            4
+                        </span>
+
+                        <img src="/assets/images/movie14.jpg "alt="Movie 4">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 5 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            5
+                        </span>
+
+                        <img src="/assets/images/movie15.jpg" alt="Movie 5">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 6 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            6
+                        </span>
+
+                        <img src="/assets/images/movie16.jpg" alt="Movie 6">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 7 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            7
+                        </span>
+
+                        <img src="/assets/images/movie17.jpg" alt="Movie 7">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 8 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            8
+                        </span>
+
+                        <img src="/assets/images/movie18.jpg" alt="Movie 8">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 9 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            9
+                        </span>
+
+                        <img src="/assets/images/movie3.jpg" alt="Movie 9">
+
+                    </div>
+
+
+                    <!-- ================= MOVIE 10 ================= -->
+
+                    <div class="movie-card">
+
+                        <span class="movie-number">
+                            10
+                        </span>
+
+                        <img src="/assets/images/movie20.jpg" alt="Movie 10">
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Right Scroll Button -->
+
+                <button class="slider-button slider-button-right" id="trending-right" aria-label="Next movies">
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+     MORE REASONS TO JOIN
+     ================================================== -->
+
+    <section class="reasons-section">
+
+        <div class="section-container">
+
+            <h2 class="section-title">
+                More reasons to join
+            </h2>
+
+
+            <div class="reasons-grid">
+
+
+                <!-- Reason 1 -->
+
+                <article class="reason-card">
+
+                    <h3>
+                        Enjoy on your TV
+                    </h3>
+
+                    <p style="color: #ffffffB3;">
+                        Watch on Smart TVs, PlayStation, Xbox,
+                        Chromecast, Apple TV, Blu-ray players
+                        and more.
+                    </p>
+
+                    <div class="reason-icon">
+
+                        <i class="fa-solid fa-tv"></i>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Reason 2 -->
+
+                <article class="reason-card">
+
+                    <h3>
+                        Download your shows to watch offline
+                    </h3>
+
+                    <p style="color: #ffffffB3;">
+                        Save your favourites easily and always
+                        have something to watch.
+                    </p>
+
+                    <div class="reason-icon">
+
+                        <i class="fa-solid fa-download"></i>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Reason 3 -->
+
+                <article class="reason-card">
+
+                    <h3>
+                        Watch everywhere
+                    </h3>
+
+                    <p style="color: #ffffffB3;">
+                        Stream unlimited movies and TV shows
+                        on your phone, tablet, laptop, and TV.
+                    </p>
+
+                    <div class="reason-icon">
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Reason 4 -->
+
+                <article class="reason-card">
+
+                    <h3>
+                        Create profiles for kids
+                    </h3>
+
+                    <p style="color: #ffffffB3;">
+                        Send kids on adventures with their
+                        favourite characters in a space made
+                        just for them.
+                    </p>
+
+                    <div class="reason-icon">
+
+                        <i class="fa-solid fa-face-smile"></i>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================================
+     FREQUENTLY ASKED QUESTIONS
+     ========================================================= -->
+
+    <section class="faq-section">
+
+        <div class="faq-container">
+
+            <!-- FAQ Heading -->
+
+            <h2 class="faq-title">
+                Frequently Asked Questions
+            </h2>
+
+
+            <!-- =================================================
+             FAQ 1
+             ================================================= -->
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button" aria-expanded="false">
+
+                    <span>
+                        What is Netflix?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    <p>
+                        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies,
+                        anime, documentaries and more – on thousands of internet-connected devices. <br> <br>
+
+                        You can watch as much as you want, whenever you want, without a single ad – all for one low
+                        monthly price. There's always something new to discover, and new TV shows and movies are added
+                        every week!
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+             FAQ 2
+             ================================================= -->
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button" aria-expanded="false">
+
+                    <span>
+                        How much does Netflix cost?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    <p>
+                        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one
+                        fixed monthly fee. Plans range from ₹149 to ₹649/month.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+             FAQ 3
+             ================================================= -->
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button" aria-expanded="false">
+
+                    <span>
+                        Where can I watch?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    <p>
+                        Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at
+                        netflix.com from your personal computer or on any internet-connected device that offers the
+                        Netflix app, including smart TVs, smartphones, tablets, streaming media players and game
+                        consoles. <br> <br>
+
+                        You can also download your favourite shows with the iOS or Android app. Use downloads to watch
+                        while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+             FAQ 4
+             ================================================= -->
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button" aria-expanded="false">
+
+                    <span>
+                        How do I cancel?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    <p>
+                        Netflix is flexible. You can easily cancel your account online in two clicks. There are no
+                        cancellation fees - start or stop your account anytime.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+             FAQ 5
+             ================================================= -->
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button" aria-expanded="false">
+
+                    <span>
+                        What can I watch on Netflix?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    <p>
+                        Netflix has an extensive library of feature films, documentaries, shows, anime, award-winning
+                        Netflix originals, and more. Watch as much as you want, anytime you want.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+             FAQ 6
+             ================================================= -->
+
+            <div class="faq-item">
+
+                <button class="faq-question" type="button" aria-expanded="false">
+
+                    <span>
+                        Is Netflix good for kids?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer">
+
+                    <p>
+                        The Netflix Kids experience is included in your membership to give parents control while kids
+                        enjoy family-friendly TV shows and films in their own space. <br> <br>
+
+                        Kids profiles come with PIN-protected parental controls that let you restrict the maturity
+                        rating of content kids can watch and block specific titles you don't want kids to see.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =========================================================
+     FINAL EMAIL CTA
+     ========================================================= -->
+ 
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer-section">
+
+    <div class="footer-container">
+
+
+        <!-- =================================================
+             CONTACT
+             ================================================= -->
+
+        <p class="footer-contact">
+
+            Questions? Call
+
+            <a href="tel:0008009191743">
+                000-800-919-1743
+            </a>
+
+        </p>
+
+
+        <!-- =================================================
+             FOOTER LINKS
+             ================================================= -->
+
+        <div class="footer-links">
+
+
+            <!-- Column 1 -->
+
+            <div class="footer-column">
+
+                <a href="#">
+                    FAQ
+                </a>
+
+                <a href="#">
+                    Investor Relations
+                </a>
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Speed Test
+                </a>
+
+            </div>
+
+
+            <!-- Column 2 -->
+
+            <div class="footer-column">
+
+                <a href="#">
+                    Help Centre
+                </a>
+
+                <a href="#">
+                    Jobs
+                </a>
+
+                <a href="#">
+                    Cookie Preferences
+                </a>
+
+                <a href="#">
+                    Legal Notices
+                </a>
+
+            </div>
+
+
+            <!-- Column 3 -->
+
+            <div class="footer-column">
+
+                <a href="#">
+                    Account
+                </a>
+
+                <a href="#">
+                    Ways to Watch
+                </a>
+
+                <a href="#">
+                    Corporate Information
+                </a>
+
+                <a href="#">
+                    Only on Netflix
+                </a>
+
+            </div>
+
+
+            <!-- Column 4 -->
+
+            <div class="footer-column">
+
+                <a href="#">
+                    Media Centre
+                </a>
+
+                <a href="#">
+                    Terms of Use
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER LANGUAGE
+             ================================================= -->
+
+        <div class="footer-language">
+
+            <i class="fa-solid fa-language"></i>
+
+            <select
+                id="footer-language-select"
+                aria-label="Select language"
+            >
+
+                <option value="en">
+                    English
+                </option>
+
+                <option value="hi">
+                    हिन्दी
+                </option>
+
+                <option value="mr">
+                    मराठी
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- =================================================
+             NETFLIX INDIA
+             ================================================= -->
+
+        <p class="footer-country">
+            Netflix India
+        </p>
+
+
+        <!-- =================================================
+             RECAPTCHA TEXT
+             ================================================= -->
+
+        <p class="footer-captcha">
+
+            This page is protected by Google reCAPTCHA
+            to ensure you're not a bot.
+
+        </p>
+
+    </div>
+
+</footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="/javascript/app.js"></script>
+
+</body>
+
+</html>

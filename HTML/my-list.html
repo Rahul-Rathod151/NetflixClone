@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My List - Netflix</title>
+     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <link rel="stylesheet" href="/css/my-list.css">
+</head>
+
+<body>
+
+    <header class="my-list-header">
+
+        <a href="browse.html" class="netflix-logo">
+            NETFLIX
+        </a>
+
+        <nav>
+            <a href="browse.html">Home</a>
+
+            <a href="search.html">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </a>
+        </nav>
+
+    </header>
+
+
+    <main class="my-list-page">
+
+        <div class="page-heading">
+
+            <h1>My List</h1>
+
+            <p id="list-count"></p>
+
+        </div>
+
+
+        <section
+            class="my-list-grid"
+            id="my-list-grid"
+        ></section>
+
+
+        <section
+            class="empty-list"
+            id="empty-list"
+        >
+
+            <i class="fa-solid fa-film"></i>
+
+            <h2>Your list is empty</h2>
+
+            <p>
+                Add movies and shows to your list
+                to watch them later.
+            </p>
+
+            <a href="browse.html">
+                Explore Netflix
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="/javascript/movies.js"></script>
+    <script src="/javascript/my-list.js"></script>
+
+</body>
+
+</html>

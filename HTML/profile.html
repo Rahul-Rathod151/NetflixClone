@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - Netflix</title>
+     <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="profile-header">
+
+        <a href="browse.html" class="netflix-logo">
+            NETFLIX
+        </a>
+
+        <a href="browse.html" class="browse-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Browse
+        </a>
+
+    </header>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <main class="profile-page">
+
+        <section class="profile-card">
+
+            <div class="profile-top">
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-basic">
+
+                    <h1 id="profile-name">
+                        Rahul
+                    </h1>
+
+                    <p id="profile-email">
+                        user@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ACCOUNT ================= -->
+
+            <div class="profile-section">
+
+                <h2>Account</h2>
+
+                <div class="profile-row">
+
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+
+                        <div>
+                            <strong>Profile</strong>
+                            <p>Manage your profile</p>
+                        </div>
+                    </div>
+
+                    <button id="edit-profile">
+                        Edit
+                    </button>
+
+                </div>
+
+
+                <div class="profile-row">
+
+                    <div>
+                        <i class="fa-solid fa-list"></i>
+
+                        <div>
+                            <strong>My List</strong>
+                            <p id="my-list-count">
+                                Your saved movies
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="my-list.html">
+                        Open
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PREFERENCES ================= -->
+
+            <div class="profile-section">
+
+                <h2>Preferences</h2>
+
+
+                <div class="profile-row">
+
+                    <div>
+
+                        <i class="fa-solid fa-language"></i>
+
+                        <div>
+
+                            <strong>Language</strong>
+
+                            <p>
+                                Choose your preferred language
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <select id="language-select">
+
+                        <option value="en">
+                            English
+                        </option>
+
+                        <option value="hi">
+                            हिन्दी
+                        </option>
+
+                        <option value="mr">
+                            मराठी
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="profile-row">
+
+                    <div>
+
+                        <i class="fa-solid fa-play"></i>
+
+                        <div>
+
+                            <strong>
+                                Autoplay
+                            </strong>
+
+                            <p>
+                                Automatically play previews
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="autoplay-toggle"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ACTIONS ================= -->
+
+            <div class="profile-actions">
+
+                <button
+                    class="logout-button"
+                    id="logout-button"
+                >
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Sign Out
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/javascript/profile.js"></script>
+
+</body>
+
+</html>

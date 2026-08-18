@@ -1,0 +1,555 @@
+/* =========================================================
+   NETFLIX SIGNUP PAGE
+   ========================================================= */
+
+
+/* ================= ROOT ================= */
+
+:root {
+    --netflix-red: #e50914;
+    --netflix-red-hover: #f6121d;
+
+    --white: #ffffff;
+    --text-gray: #b3b3b3;
+
+    --background: #000000;
+    --input-bg: #333333;
+
+    --error: #e87c03;
+    --success: #46d369;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.95)
+        ),
+        url("../assets/images/login-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: var(--white);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================= HEADER ================= */
+
+.signup-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 24px 5%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+}
+
+
+/* ================= LOGO ================= */
+
+.netflix-logo {
+    color: var(--netflix-red);
+
+    text-decoration: none;
+
+    font-size: 2.3rem;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+/* ================= SIGN IN LINK ================= */
+
+.signin-link {
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    padding: 9px 18px;
+
+    border-radius: 4px;
+
+    background: var(--netflix-red);
+
+    transition: 0.2s ease;
+}
+
+
+.signin-link:hover {
+    background: var(--netflix-red-hover);
+}
+
+
+/* ================= SIGNUP PAGE ================= */
+
+.signup-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 20px 40px;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.signup-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+
+/* ================= SIGNUP BOX ================= */
+
+.signup-box {
+    width: 100%;
+
+    padding: 40px 55px;
+
+    background: rgba(0, 0, 0, 0.80);
+
+    border-radius: 6px;
+}
+
+
+/* ================= ICON ================= */
+
+.signup-icon {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(229, 9, 20, 0.15);
+
+    color: var(--netflix-red);
+
+    font-size: 25px;
+}
+
+
+/* ================= TITLE ================= */
+
+.signup-box h1 {
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================= DESCRIPTION ================= */
+
+.signup-description {
+    color: var(--text-gray);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= INPUT ================= */
+
+.input-group {
+    position: relative;
+
+    margin-bottom: 15px;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    height: 56px;
+
+    padding: 20px 48px 6px 16px;
+
+    border: 1px solid transparent;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    background: var(--input-bg);
+
+    color: var(--white);
+
+    font-size: 16px;
+
+    transition: border 0.2s ease;
+}
+
+
+.input-group input:focus {
+    border-color: var(--white);
+}
+
+
+/* ================= FLOATING LABEL ================= */
+
+.input-group label {
+    position: absolute;
+
+    left: 16px;
+    top: 18px;
+
+    color: var(--text-gray);
+
+    font-size: 16px;
+
+    pointer-events: none;
+
+    transition: 0.2s ease;
+}
+
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: 7px;
+
+    font-size: 11px;
+}
+
+
+/* ================= PASSWORD BUTTON ================= */
+
+.password-toggle {
+    position: absolute;
+
+    top: 50%;
+    right: 14px;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--text-gray);
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+/* ================= ERROR ================= */
+
+.error-message {
+    display: block;
+
+    min-height: 16px;
+
+    margin-top: 5px;
+
+    color: var(--error);
+
+    font-size: 13px;
+}
+
+
+/* ================= SIGNUP BUTTON ================= */
+
+.signup-button {
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: var(--netflix-red);
+
+    color: var(--white);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.signup-button:hover {
+    background: var(--netflix-red-hover);
+}
+
+
+/* ================= DIVIDER ================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 23px 0;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #555;
+}
+
+
+/* ================= GOOGLE ================= */
+
+.google-button {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #777;
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--white);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s ease;
+}
+
+
+.google-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+.google-button i {
+    font-size: 17px;
+}
+
+
+/* ================= LOGIN TEXT ================= */
+
+.login-text {
+    margin-top: 28px;
+
+    color: var(--text-gray);
+
+    font-size: 15px;
+
+    text-align: center;
+}
+
+
+.login-text a {
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= MESSAGE ================= */
+
+.signup-message {
+    margin-top: 18px;
+
+    color: var(--success);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* ================= FOOTER ================= */
+
+.signup-footer {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 25px 30px 50px;
+
+    color: var(--text-gray);
+
+    font-size: 14px;
+}
+
+
+.signup-footer a {
+    color: var(--text-gray);
+
+    text-decoration: none;
+}
+
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= FOOTER LINKS ================= */
+
+.footer-links {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+    .signup-header {
+        padding: 20px 5%;
+    }
+
+    .netflix-logo {
+        font-size: 2rem;
+    }
+
+    .signup-box {
+        padding: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    body {
+        background: #000000;
+    }
+
+    .signup-header {
+        padding: 18px 20px;
+    }
+
+    .netflix-logo {
+        font-size: 1.8rem;
+    }
+
+    .signin-link {
+        font-size: 14px;
+
+        padding: 8px 14px;
+    }
+
+    .signup-page {
+        align-items: flex-start;
+
+        padding: 90px 20px 20px;
+    }
+
+    .signup-box {
+        padding: 25px 0;
+
+        background: transparent;
+    }
+
+    .signup-box h1 {
+        font-size: 1.8rem;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 350px) {
+
+    .signup-page {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+}
